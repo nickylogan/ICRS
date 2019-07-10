@@ -25,6 +25,7 @@ curriculum = {
     ]
 }
 
+
 class CardContainer:
     @staticmethod
     def render():
@@ -33,10 +34,17 @@ class CardContainer:
                 dbc.Col(
                     html.H2("Score Input"),
                 ),
-                className="mt-3"
+                className="mt-4"
             ),
             dbc.Row([
                 dbc.Col(TermCard.render(title, courses), md=4) for title, courses in curriculum.items()
             ], className="mt-3"),
+            dbc.Row(
+                dbc.Col(
+                    dbc.Button("Pick a concentration for me!",
+                               outline=True, color="primary", id="submit-button", className="ml-auto")
+                ),
+                className="mt-5 mb-5",
+            )
         ]
         return html.Div(element)

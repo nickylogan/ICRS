@@ -10,8 +10,8 @@ class TermCard:
     def render(title, courses: CourseList):
         element = dbc.Card([
             dbc.CardBody([
-                html.H4(title),
+                html.H4(title, className="card-title text-white mb-0"),
             ]),
             dbc.ListGroup([CourseInput.render(course[0], course[1]) for course in courses], flush=True)
-        ])
+        ], color="primary text-primary")
         return element
