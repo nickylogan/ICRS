@@ -116,9 +116,10 @@ class RecommendationContainer:
     def render():
         element = [
             dbc.Row(
-                dbc.Col(
+                dbc.Col([
                     html.H2("Recommended Concentration"),
-                ),
+                    html.Span(id="concentration-data", className="d-none")
+                ]),
                 className="mt-4"
             ),
             dbc.CardDeck([IIMHeader.render(), MIHeader.render(), SEHeader.render()], className="mt-3"),
@@ -156,9 +157,9 @@ class MIHeader:
                 ]),
                 dbc.CardFooter([
                     "Predicted Performance: ",
-                    html.Span("66", id="mi-performance"),
+                    html.Span("65", id="mi-performance"),
                     "%"
-                ], className="bg-light border-0")
+                ], className="border-0")
             ],
             id="mi-header",
             color="secondary",
@@ -178,7 +179,7 @@ class SEHeader:
                     "Predicted Performance: ",
                     html.Span("53", id="se-performance"),
                     "%"
-                ], className="bg-light border-0")
+                ], className="border-0")
             ],
             id="se-header",
             color="secondary",
