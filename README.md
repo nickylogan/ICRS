@@ -2,7 +2,9 @@
 
 ## Background
 
+Most universities have what is named as an academic concentration, which is a branch of an academic major. This includes the Informatics Major in Universitas Pelita Harapan. Choosing the right academic concentration is very important, as it determines the main focus for students to learn on for more than half of their university lifetime.
 
+Unfortunately, there is little information available to help students decide their concentration. Considering the fact that students also strive for academic success, this application tries to give an insight to help them choose the right concentration. Given a list of course scores for the first four semesters, the student will be given the predicted rate of success for each Informatics major concentration.
 
 ## Getting Started
 
@@ -38,7 +40,7 @@ $ source myvenv/bin/activate
 (myvenv) $ _
 ```
 
-> Make sure the virtual environment is already activated
+> **Make sure the virtual environment is already activated**
 
 There are several libraries used for this project, all of them are listed in `requirements.txt`. To install all of them, simply run the following command from the project directory.
 
@@ -57,7 +59,7 @@ There are several libraries used for this project, all of them are listed in `re
 
 ### Running the app
 
-> Make sure the virtual environment is still activated
+> **Make sure the virtual environment is still activated**
 
 The app was built using [Dash](https://dash.plot.ly/). To run the app locally, run the following command from the `app` directory:
 
