@@ -8,24 +8,24 @@ CourseList = List[Tuple[str, str]]
 
 curriculum: CourseList = {
     "Term 1": [
-        ("calculus-1", "Calculus I"),
-        ("discrete-math", "Discrete Mathematics"),
-        ("intro-inf", "Introduction to Informatics"),
-        ("prolog", "Programming Logic"),
+        ("INF0131", "Calculus I"),
+        ("INF0221", "Discrete Mathematics"),
+        ("INF0381", "Introduction to Informatics"),
+        ("INF0011", "Programming Logic"),
     ],
     "Term 2": [
-        ("calculus-2", "Calculus II"),
-        ("data-structure", "Data Structure"),
-        ("java", "Java Programming"),
-        ("mis", "Management Information System"),
-        ("stats", "Statistics & Probability"),
+        ("INF0141", "Calculus II"),
+        ("INF0621", "Data Structure"),
+        ("INF0301", "Java Programming"),
+        ("INF0531", "Management Information System"),
+        ("INF0601", "Statistics & Probability"),
     ],
     "Term 4": [
-        ("algorithm-analysis", "Algorithm Analysis"),
-        ("comp-arch", "Computer Organization & Architecture"),
-        ("database", "Database Systems"),
-        ("linear-algebra", "Matrices & Linear Algebra"),
-        ("oop", "Object-Oriented Programming"),
+        ("INF0031", "Algorithm Analysis"),
+        ("INF0271", "Computer Organization & Architecture"),
+        ("INF0521", "Database Systems"),
+        ("INF0021", "Matrices & Linear Algebra"),
+        ("INF0291", "Object-Oriented Programming"),
     ]
 }
 
