@@ -79,6 +79,35 @@ Debugger PIN: XXX-XXX-XXX
 
 You can open the app on the browser by accessing `http://127.0.0.1:8050/`.
 
+## How does it work
+
+![diagram](img/diagram.svg)
+
+The diagram shows several major steps in the whole development process, each of which are going to be explained in the following subsections.
+
+### Data acquisition
+
+// TODO: add more
+
+### Data cleansing
+
+The raw data *needs* to be transformed, so it can be trained. The full process can be read [here](data/preprocess.ipynb).
+
+### Model training + test
+
+### Frontend development using Dash
+
+The app lives inside the `app` directory. As you can see, there are four main python files:
+
+* `app.py`: The entry point of the web application
+* `callbacks.py`: Dash callbacks to register, so that data can flow between components
+* `components.py`: UI components
+* `layout.py`: Contains the main layout for the whole app
+
+### Integration with Dash
+
+### Visualize and predict data
+
 ## Authors
 
 * **Laurentius Dominick Logan** - [nickylogan](https://github.com/nickylogan)
