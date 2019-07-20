@@ -97,7 +97,7 @@ The raw data *needed* to be transformed so that the prediction model can be trai
 
 ### Model training + test
 
-The prediction model is trained using a variant of Support Vector Machine (SVM) called Support Vector Regression (SVR). 
+The prediction model is trained using a variant of Support Vector Machine (SVM) called Support Vector Regression (SVR). Its parameters are tuned using GridSearch. Full explanation can be seen [here](docs/model.md)
 
 ### Frontend development using Dash
 
