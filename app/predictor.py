@@ -4,12 +4,6 @@ import pandas as pd
 import sklearn.model_selection as ms
 import random
 
-# Input is a numpy dataframe that
-# contains ALL courses BEFORE concentration courses.
-
-# Output is a numpy series that returns a predicted GPA.
-
-
 def load_imdd(X_test):
     f = open(r'../data/imdd.sav', 'rb')
     loaded_model = pickle.load(f)

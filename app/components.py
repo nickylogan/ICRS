@@ -6,6 +6,7 @@ from random import randint
 
 CourseList = List[Tuple[str, str]]
 
+# Store the curriculum in a dictionary for easy access
 curriculum: CourseList = {
     "Term 1": [
         ("INF0131", "Calculus I"),

@@ -2,7 +2,9 @@ from dash.dependencies import Output, Input, State
 from predictor import predict
 import json
 
-
+"""
+register_callbacks registers callbacks for a dash app
+"""
 def register_callbacks(app):
     @app.callback(
         Output("concentration-data", "children"),
@@ -37,7 +39,6 @@ def register_callbacks(app):
                      INF0521,
                      INF0021,
                      INF0291):
-        # TODO: replace with actual prediction
         scores = [4.0, 3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0]
         data = {
             "INF0131": [scores[INF0131]],
@@ -58,6 +59,9 @@ def register_callbacks(app):
         result = predict(data)
         return json.dumps(result)
 
+    """
+    This callback is used for rendering the GUI element of the IIM concentration
+    """
     @app.callback(
         [
             Output("iim-recommended", "children"),
@@ -79,6 +83,9 @@ def register_callbacks(app):
         textColor = "text-white" if recommended else "text-primary"
         return recommended_str, performance, color, textColor
 
+    """
+    This callback is used for rendering the GUI element of the MI concentration
+    """
     @app.callback(
         [
             Output("mi-recommended", "children"),
@@ -100,6 +107,9 @@ def register_callbacks(app):
         textColor = "text-white" if recommended else "text-primary"
         return recommended_str, performance, color, textColor
 
+    """
+    This callback is used for rendering the GUI element of the SE concentration
+    """
     @app.callback(
         [
             Output("se-recommended", "children"),

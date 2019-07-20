@@ -2,6 +2,7 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 from components import Header, TermCardContainer, RecommendationContainer
 
+# The main layour of the app
 def Root():
     element = dbc.Container([
         Header.render(),
