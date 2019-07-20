@@ -79,21 +79,25 @@ Debugger PIN: XXX-XXX-XXX
 
 You can open the app on the browser by accessing `http://127.0.0.1:8050/`.
 
-## How does it work
+## Implementation steps
 
-![diagram](img/diagram.svg)
+<img src="img/diagram.svg" height="400">
 
-The diagram shows several major steps in the whole development process, each of which are going to be explained in the following subsections.
+The diagram above shows several major steps in the whole development process, each of which is going to be explained in the following subsections.
 
 ### Data acquisition
+
+The data were gathered from UPH's database for all students, including alumnis from previous years. The gathered students' data were from cohorts 2012 until 2015.
 
 // TODO: add more
 
 ### Data cleansing
 
-The raw data *needs* to be transformed, so it can be trained. The full process can be read [here](data/preprocess.ipynb).
+The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [here](data/preprocess.ipynb).
 
 ### Model training + test
+
+The prediction model is trained using a variant of Support Vector Machine (SVM) called Support Vector Regression (SVR). 
 
 ### Frontend development using Dash
 
@@ -103,13 +107,22 @@ The app lives inside the `app` directory. As you can see, there are four main py
 * `callbacks.py`: Dash callbacks to register, so that data can flow between components
 * `components.py`: UI components
 * `layout.py`: Contains the main layout for the whole app
+* `predictor.py`: Connects the app and the prediction model
+
+If you want to understand the app's code in detail, you might wanna look ***[here](docs/dash.md)*** or read the code yourself.
 
 ### Integration with Dash
 
+The previously trained model can be saved into a file using `pickle`, a built-in library for data serialization and deserializtion. It is then loaded when a prediction request is invoked from the app. The `predictor.py` file contains functions that can handle prediction requests.
+
 ### Visualize and predict data
+
+// TODO: add content
 
 ## Authors
 
 * **Laurentius Dominick Logan** - [nickylogan](https://github.com/nickylogan)
 * **Nadya Felim Bachtiar** - [Ao-Re](https://github.com/ao-re)
 * **Barjuan Davis Penthalion** - [cokpsz](https://github.com/cokpsz)
+
+> Made as a Data Science course project in Universitas Pelita Harapan
