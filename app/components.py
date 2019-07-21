@@ -9,24 +9,24 @@ CourseList = List[Tuple[str, str]]
 # Store the curriculum in a dictionary for easy access
 curriculum: CourseList = {
     "Term 1": [
-        ("INF0131", "Calculus I"),
-        ("INF0221", "Discrete Mathematics"),
-        ("INF0381", "Introduction to Informatics"),
-        ("INF0011", "Programming Logic"),
+        ("calculus1", "Calculus I"),
+        ("discrete_math", "Discrete Mathematics"),
+        ("intro_to_it", "Introduction to Informatics"),
+        ("prolog", "Programming Logic"),
     ],
     "Term 2": [
-        ("INF0141", "Calculus II"),
-        ("INF0621", "Data Structure"),
-        ("INF0301", "Java Programming"),
-        ("INF0531", "Management Information System"),
-        ("INF0601", "Statistics & Probability"),
+        ("calculus2", "Calculus II"),
+        ("data_structure", "Data Structure"),
+        ("java", "Java Programming"),
+        ("mis", "Management Information System"),
+        ("stats", "Statistics & Probability"),
     ],
     "Term 4": [
-        ("INF0031", "Algorithm Analysis"),
-        ("INF0271", "Computer Organization & Architecture"),
-        ("INF0521", "Database Systems"),
-        ("INF0021", "Matrices & Linear Algebra"),
-        ("INF0291", "Object-Oriented Programming"),
+        ("algo_analysis", "Algorithm Analysis"),
+        ("computer_arch", "Computer Organization & Architecture"),
+        ("database", "Database Systems"),
+        ("linear_algebra", "Matrices & Linear Algebra"),
+        ("oop", "Object-Oriented Programming"),
     ]
 }
 
@@ -138,7 +138,6 @@ class IIMHeader:
                 dbc.CardFooter([
                     "Predicted Performance: ",
                     html.Span("77", id="iim-performance"),
-                    "%",
                 ], className="border-0"),
             ],
             id="iim-header",
@@ -159,7 +158,6 @@ class MIHeader:
                 dbc.CardFooter([
                     "Predicted Performance: ",
                     html.Span("65", id="mi-performance"),
-                    "%"
                 ], className="border-0")
             ],
             id="mi-header",
@@ -179,7 +177,6 @@ class SEHeader:
                 dbc.CardFooter([
                     "Predicted Performance: ",
                     html.Span("53", id="se-performance"),
-                    "%"
                 ], className="border-0")
             ],
             id="se-header",
