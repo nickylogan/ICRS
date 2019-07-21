@@ -6,23 +6,20 @@ An additional library is used on top of the existing dash components, called [da
 
 ## Codebase structure
 
-The dash app lives inside the `app` directory. Below is a table that explains it:
+The dash app lives inside the `app` directory. Below is a table that explains the four main files:
 
-| File                | Description                                                          |
-| ------------------- | -------------------------------------------------------------------- |
-| `app.py`            | The entry point of the web application                               |
-| `assets/custom.css` | Custom app styles (can be ignored)                                   |
-| `layout.py`         | Contains the main layout for the whole app                           |
-| `components.py`     | UI components                                                        |
-| `callbacks.py`      | Dash callbacks to register, so that data can flow between components |
-| `predictor.py`      | Connects the app and the prediction model                            |
+| File            | Description                                |
+| --------------- | ------------------------------------------ |
+| `app.py`        | The entry point of the web application     |
+| `layout.py`     | Contains the main layout for the whole app |
+| `components.py` | UI components                              |
+| `callbacks.py`  | Dash callbacks                             |
 
 ## `app.py`
 
-As you already know, the web application's entry point is from `app.py`. Let's examine it a bit more.
+As you may already know, the web application's entry point is from `app.py`. Let's examine it a bit more.
 
 The code snippet below shows import statements in the beginning of the script. The first three allows us to use `dash` and `dash-bootstrap-components`. The last two are from our own scripts&mdash;we'll explain them later.
-
 
 ```python
 import dash
@@ -114,47 +111,53 @@ If you want to use the component, you can just simply call `Component.render()`.
 
 This file contains all of the data flow logic for the web app. Dash callback functions are prepended with the `@app.callback` decorator. The `app` here must refer to the same `app` that was started in the main file. Hence, that's why the `register_callback` needs the `app` as a parameter.
 
-We declare four callbacks, one for form submission and the other three for intermediate callbacks. We'll only explain the main callback.
+We declare four callbacks, one for form submission and the other three for intermediate callbacks. We'll only how a dash callback works in general.
 
 ```python
 @app.callback(
     Output("concentration-data", "children"),
     [Input("submit-button", "n_clicks")],
-    [State("input-INF0131", "value"),
-      State("input-INF0221", "value"),
-      State("input-INF0381", "value"),
-      State("input-INF0011", "value"),
-      State("input-INF0141", "value"),
-      State("input-INF0621", "value"),
-      State("input-INF0301", "value"),
-      State("input-INF0531", "value"),
-      State("input-INF0601", "value"),
-      State("input-INF0031", "value"),
-      State("input-INF0271", "value"),
-      State("input-INF0521", "value"),
-      State("input-INF0021", "value"),
-      State("input-INF0291", "value")]
+    [State("input-calculus1", "value"),
+    State("input-discrete_math", "value"),
+    State("input-intro_to_it", "value"),
+    State("input-prolog", "value"),
+    State("input-calculus2", "value"),
+    State("input-data_structure", "value"),
+    State("input-java", "value"),
+    State("input-mis", "value"),
+    State("input-stats", "value"),
+    State("input-algo_analysis", "value"),
+    State("input-computer_arch", "value"),
+    State("input-database", "value"),
+    State("input-linear_algebra", "value"),
+    State("input-oop", "value")]
 )
-def process_data(n_clicks,INF0131,INF0221,INF0381,INF0011,INF0141,INF0621,INF0301,INF0531,INF0601,INF0031,INF0271,INF0521,INF0021,INF0291):
+def process_data(
+    n_clicks: int,
+    calculus1: int, discrete_math: int, intro_to_it: int, prolog: int,
+    calculus2: int, data_structure: int, java: int, mis: int, stats: int,
+    algo_analysis: int, computer_arch: int, database: int, linear_algebra: int, oop: int,
+) -> str:
+    '''Process the data from the provided arguments'''
+
     scores = [4.0, 3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0]
-    data = {
-        "INF0131": [scores[INF0131]],
-        "INF0221": [scores[INF0221]],
-        "INF0381": [scores[INF0381]],
-        "INF0011": [scores[INF0011]],
-        "INF0141": [scores[INF0141]],
-        "INF0621": [scores[INF0621]],
-        "INF0301": [scores[INF0301]],
-        "INF0531": [scores[INF0531]],
-        "INF0601": [scores[INF0601]],
-        "INF0031": [scores[INF0031]],
-        "INF0271": [scores[INF0271]],
-        "INF0521": [scores[INF0521]],
-        "INF0021": [scores[INF0021]],
-        "INF0291": [scores[INF0291]],
-    }
-    result = predict(data)
+    result = predictor.predict(
+        calculus1=scores[calculus1],
+        discrete_math=scores[discrete_math],
+        intro_to_it=scores[intro_to_it],
+        prolog=scores[prolog],
+        calculus2=scores[calculus2],
+        data_structure=scores[data_structure],
+        java=scores[java],
+        mis=scores[mis],
+        stats=scores[stats],
+        algo_analysis=scores[algo_analysis],
+        computer_arch=scores[computer_arch],
+        database=scores[database],
+        linear_algebra=scores[linear_algebra],
+        oop=scores[oop],
+    )
     return json.dumps(result)
 ```
 
-The `@app.callback` decorator can take two or three arguments. The first one is the `Output` argument, which is where the return value should be displayed. The second argument is the `Input` object marking which elements should be listened for changes. The last and optional argument is the `State` object for keeping state. This is useful to simulate normal form submission.
+The `@app.callback` decorator can take two or three arguments. The first one is the `Output` argument, specifying where the return value should be displayed. The second argument is the `Input` object, marking which elements should be listened for changes. The last and optional argument is the `State` object for keeping state. This is useful to simulate common form submission.

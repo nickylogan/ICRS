@@ -93,11 +93,11 @@ The data were gathered from UPH's database for all students, including alumnis f
 
 ### Data cleansing
 
-The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [here](data/preprocess.ipynb).
+The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [***here***](data/preprocess.ipynb).
 
 ### Model training + test
 
-The prediction model is trained using a variant of Support Vector Machine (SVM) called Support Vector Regression (SVR). Its parameters are tuned using GridSearch. Full explanation can be seen [here](docs/model.md)
+The prediction model is trained using a variant of Support Vector Machine (SVM) called Support Vector Regression (SVR). Its parameters are tuned using GridSearch. Full explanation can be seen [***here***](docs/model.md)
 
 ### Frontend development using Dash
 
@@ -107,13 +107,21 @@ The app lives inside the `app` directory. As you can see, there are four main py
 * `callbacks.py`: Dash callbacks to register, so that data can flow between components
 * `components.py`: UI components
 * `layout.py`: Contains the main layout for the whole app
-* `predictor.py`: Connects the app and the prediction model
 
-If you want to understand the app's code in detail, you might wanna look ***[here](docs/dash.md)*** or read the code yourself.
+If you want to understand the app's code in detail, you might wanna look [***here***](docs/dash.md) or read the code yourself.
 
 ### Integration with Dash
 
-The previously trained model can be saved into a file using `pickle`, a built-in library for data serialization and deserializtion. It is then loaded when a prediction request is invoked from the app. The `predictor.py` file contains functions that can handle prediction requests.
+The previously trained model can be saved into a file using `pickle`, a built-in library for data serialization and deserialization. All of these files can be seen inside the `model` directory&mdash;the ones with the `.sav` extension. They are then loaded into `predictor.py`, which contains a class called `Predictor` that handles prediction requests. Below is a code snippet explaining the general gist of it.
+
+```python
+# This code snippet is a rough implementation of how the
+# model is first loaded and used for prediction
+def predict(data):
+  model_file = open('model.sav', 'rb')
+  model = pickle.load(model_file)
+  return model.predict(data)
+```
 
 ### Visualize and predict data
 
