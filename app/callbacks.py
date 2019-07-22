@@ -45,6 +45,9 @@ def register_callbacks(app: Dash):
             algo_analysis, computer_arch, database, linear_algebra, oop
         ]
 
+        if not n_clicks:
+            return json.dumps({})
+
         if any(x == -1 for x in values):
             result = {
                 'error': 'All course scores must be non-empty'
@@ -87,6 +90,9 @@ def register_callbacks(app: Dash):
 
         if error:
             return "", "d-none", "d-block", error, "d-none"
+        
+        if not data:
+            return "", "d-block", "d-none", "", "d-none"
 
         return json.dumps(data), "d-none", "d-none", "", "d-block"
 
@@ -173,21 +179,16 @@ def register_callbacks(app: Dash):
 
     @app.callback(
         [
-            Output("input-content", "children"),
-            Output("output-content", "children"),
+            Output("manual-input-container", "className"),
+            Output("manual-output-container", "className"),
+            Output("batch-input-container", "className"),
         ],
         [Input("tabs", "active_tab")]
     )
     def render_tab_content(tab: str):
         if tab == "playground":
-            return [
-                ManualInputContainer.render(),
-                ManualOutputContainer.render(),
-            ]
+            return "d-block", "d-block", "d-none"
         if tab == "batch":
-            return [
-                BatchInputContainer.render(),
-                html.P("Unknown tab"),
-            ]
+            return "d-none", "d-none", "d-block"
 
-        return [html.P("Unknown tab"), html.P("Unknown tab")]
+        return "d-none", "d-none", "d-none"

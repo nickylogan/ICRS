@@ -78,7 +78,8 @@ class InputContainer:
                 ),
                 className="mt-4 mb-2"
             ),
-            html.Div(id="input-content")
+            ManualInputContainer.render(),
+            BatchInputContainer.render(),
         ]
         return html.Div(element)
 
@@ -98,7 +99,7 @@ class ManualInputContainer:
                 className="mt-5 mb-5",
             )
         ]
-        return html.Div(element)
+        return html.Div(element, id="manual-input-container")
 
 
 class BatchInputContainer:
@@ -122,19 +123,25 @@ class BatchInputContainer:
                             html.Code(" .csv "),
                             "file"
                         ], color="link", className="p-0 mt-3"),
+                        html.Br(),
+                        html.Small(
+                            'Maximum size: 2MB',
+                            className="text-secondary",
+                            style={'fontSize': '0.765625rem'}
+                        ),
                     ]),
                     style={
                         'width': '100%',
                         'borderWidth': '1px',
                         'borderStyle': 'dashed',
                     },
-                    className="py-3 text-center",
+                    className="py-5 text-center",
                     accept='.csv',
                     max_size=2000,
                 )
             )
         ]
-        return dbc.Row(element)
+        return dbc.Row(element, id="batch-input-container")
 
 
 class TermCard:
@@ -198,7 +205,7 @@ class RecommendationContainer:
                 ]),
                 className="mt-4"
             ),
-            html.Div(id="output-content")
+            ManualOutputContainer.render(),
         ]
         return html.Div(element)
 
@@ -225,7 +232,7 @@ class ManualOutputContainer:
                 className="d-none",
             ),
         ], 
-            id="manual-output-content"
+            id="manual-output-container"
         )
         return element
 
