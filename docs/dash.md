@@ -19,15 +19,16 @@ The entry point of the web application is on `main.py`. Other components live in
 
 As you may already know, the web application's entry point is from `main.py`. Let's examine it a bit more.
 
-The code snippet below shows import statements in the beginning of the script. The first three allows us to use `dash` and `dash-bootstrap-components`. The last two are from our own scripts&mdash;we'll explain them later.
+The code snippet below shows import statements in the beginning of the script. The first three allows us to use `dash` and `dash-bootstrap-components`. The last three are from our own scripts&mdash;we'll explain them later.
 
 ```python
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 
-from layout import Root
-from callbacks import register_callbacks
+from app.layout import Root
+from app.callbacks import register_callbacks
+from app.routes import register_routes
 ```
 
 Next is the app configuration, shown in the code snippet below. The app is created using the `dash.Dash()` function, along with two custom stylesheets. The first one uses the preexisting theme for `dash-bootstrap-components` and the other is our own custom styles. Using a bootstrap theme is extremely time-saving, as it avoids the need to exhaustively create our own style.
@@ -45,8 +46,6 @@ As you can see above, we called the `Root()` function. In short, it returns the 
 Once the app is configured, data callbacks are registered. `register_callbacks()` is a custom-made function, so that callback registration can be separated into another file. We'll explain [later](#callbackspy) why it takes the `app` as an argument.
 
 ```python
-# register_calbacks registers app callbacks, which are necessary
-# for data flow between components
 register_callbacks(app)
 ```
 
