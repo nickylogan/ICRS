@@ -85,7 +85,7 @@ You can open the app on the browser by accessing `http://127.0.0.1:8050/`.
 
 ## Implementation steps
 
-<img src="img/diagram.svg" height="400">
+<img src="img/diagrams/steps.svg" height="400">
 
 The diagram above shows several major steps in the whole development process, each of which is going to be explained in the following subsections.
 
@@ -97,7 +97,7 @@ With permission from UPH, the data were gathered from their database for all stu
 
 The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [***here***](notebooks/preprocess.ipynb).
 
-<img src="img/DataCleansing.svg" height="200">
+<img src="img/diagrams/DataCleansing.svg" height="200">
 
 ### Model training + test
 

@@ -160,7 +160,7 @@ The `@app.callback` decorator can take two or three arguments. The first one is 
 
 Below is an illustration of the full callback graph:
 
-![callback](/img/callback.svg)
+![callback](/img/diagrams/callback.svg)
 
 ## `routes.py`
 
@@ -205,7 +205,7 @@ It has parameters `accept` and `max_size`. We want `.csv` files to be uploaded. 
 
 ### Downloading
 
-File download uses a hack mentioned [here](https://community.plot.ly/t/download-raw-data/4700/8). Basically, it uses an `<a>` element, with its `href` pointing to a data url. By clicking on it, the browser will automatically download the file encoded to the `href`. Here's an example of the rendered element:
+Dynamic file download uses a hack explained [here](https://community.plot.ly/t/download-raw-data/4700/8). Basically, it uses an `<a>` element, with its `href` pointing to a data url. By clicking on it, the browser will automatically download the file encoded to the `href`. Here's an example of the rendered element:
 
 ```html
 <a
