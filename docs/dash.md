@@ -160,3 +160,7 @@ def process_data(
 ```
 
 The `@app.callback` decorator can take two or three arguments. The first one is the `Output` argument, specifying where the return value should be displayed. The second argument is the `Input` object, marking which elements should be listened for changes. The last and optional argument is the `State` object for keeping state. This is useful to simulate common form submission.
+
+Below is an illustration of the full callback graph:
+
+![callback](/img/callback.svg)

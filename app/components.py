@@ -107,8 +107,7 @@ class BatchInputContainer:
     @staticmethod
     def render():
         element = [
-            dbc.Button("Download template", color="link",
-                       style={'textDecoration': 'underline'}),
+            html.A("Download template", className="btn btn-link", href="/static/sample.csv"),
             dbc.Col(
                 dcc.Upload(
                     id='upload-data',

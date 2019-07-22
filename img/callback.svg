@@ -1,0 +1,526 @@
+<svg width="1954pt" height="505pt" viewBox="0.00 0.00 1954.00 505.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 501.2)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-501.2 1950,-501.2 1950,4 -4,4"></polygon>
+<g id="clust2" class="cluster">
+<title>cluster_0</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="895,-277.6 895,-354.4 1000,-354.4 1000,-277.6 895,-277.6"></polygon>
+<text text-anchor="middle" x="947.5" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">manual-output</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_1</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="898,-412.4 898,-489.2 998,-489.2 998,-412.4 898,-412.4"></polygon>
+<text text-anchor="middle" x="948" y="-472.6" font-family="Arial" font-size="14.00" fill="#333333">submit-button</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_2</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="639,-142.8 639,-219.6 770,-219.6 770,-142.8 639,-142.8"></polygon>
+<text text-anchor="middle" x="704.5" y="-203" font-family="Arial" font-size="14.00" fill="#333333">concentration-data</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_3</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="778,-142.8 778,-219.6 899,-219.6 899,-142.8 778,-142.8"></polygon>
+<text text-anchor="middle" x="838.5" y="-203" font-family="Arial" font-size="14.00" fill="#333333">manual-welcome</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_4</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="907,-142.8 907,-219.6 1092,-219.6 1092,-142.8 907,-142.8"></polygon>
+<text text-anchor="middle" x="999.5" y="-203" font-family="Arial" font-size="14.00" fill="#333333">manual-error</text>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_5</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1100,-142.8 1100,-219.6 1202,-219.6 1202,-142.8 1100,-142.8"></polygon>
+<text text-anchor="middle" x="1151" y="-203" font-family="Arial" font-size="14.00" fill="#333333">manual-deck</text>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_6</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="8,-8 8,-84.8 148,-84.8 148,-8 8,-8"></polygon>
+<text text-anchor="middle" x="78" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">imdd-recommended</text>
+</g>
+<g id="clust9" class="cluster">
+<title>cluster_7</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="156,-8 156,-84.8 285,-84.8 285,-8 156,-8"></polygon>
+<text text-anchor="middle" x="220.5" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">imdd-performance</text>
+</g>
+<g id="clust10" class="cluster">
+<title>cluster_8</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="293,-8 293,-84.8 467,-84.8 467,-8 293,-8"></polygon>
+<text text-anchor="middle" x="380" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">imdd-header</text>
+</g>
+<g id="clust11" class="cluster">
+<title>cluster_9</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="475,-8 475,-84.8 599,-84.8 599,-8 475,-8"></polygon>
+<text text-anchor="middle" x="537" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">mi-recommended</text>
+</g>
+<g id="clust12" class="cluster">
+<title>cluster_10</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="607,-8 607,-84.8 720,-84.8 720,-8 607,-8"></polygon>
+<text text-anchor="middle" x="663.5" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">mi-performance</text>
+</g>
+<g id="clust13" class="cluster">
+<title>cluster_11</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="728,-8 728,-84.8 902,-84.8 902,-8 728,-8"></polygon>
+<text text-anchor="middle" x="815" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">mi-header</text>
+</g>
+<g id="clust14" class="cluster">
+<title>cluster_12</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="910,-8 910,-84.8 1034,-84.8 1034,-8 910,-8"></polygon>
+<text text-anchor="middle" x="972" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">se-recommended</text>
+</g>
+<g id="clust15" class="cluster">
+<title>cluster_13</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1042,-8 1042,-84.8 1156,-84.8 1156,-8 1042,-8"></polygon>
+<text text-anchor="middle" x="1099" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">se-performance</text>
+</g>
+<g id="clust16" class="cluster">
+<title>cluster_14</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1164,-8 1164,-84.8 1338,-84.8 1338,-8 1164,-8"></polygon>
+<text text-anchor="middle" x="1251" y="-68.2" font-family="Arial" font-size="14.00" fill="#333333">se-header</text>
+</g>
+<g id="clust17" class="cluster">
+<title>cluster_15</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1008,-277.6 1008,-354.4 1167,-354.4 1167,-277.6 1008,-277.6"></polygon>
+<text text-anchor="middle" x="1087.5" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">manual-input-container</text>
+</g>
+<g id="clust18" class="cluster">
+<title>cluster_16</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1175,-277.6 1175,-354.4 1342,-354.4 1342,-277.6 1175,-277.6"></polygon>
+<text text-anchor="middle" x="1258.5" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">manual-output-container</text>
+</g>
+<g id="clust19" class="cluster">
+<title>cluster_17</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1350,-277.6 1350,-354.4 1497,-354.4 1497,-277.6 1350,-277.6"></polygon>
+<text text-anchor="middle" x="1423.5" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">batch-input-container</text>
+</g>
+<g id="clust20" class="cluster">
+<title>cluster_18</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1505,-277.6 1505,-354.4 1661,-354.4 1661,-277.6 1505,-277.6"></polygon>
+<text text-anchor="middle" x="1583" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">batch-output-container</text>
+</g>
+<g id="clust21" class="cluster">
+<title>cluster_19</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1298,-412.4 1298,-489.2 1394,-489.2 1394,-412.4 1298,-412.4"></polygon>
+<text text-anchor="middle" x="1346" y="-472.6" font-family="Arial" font-size="14.00" fill="#333333">tabs</text>
+</g>
+<g id="clust22" class="cluster">
+<title>cluster_20</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1669,-277.6 1669,-354.4 1772,-354.4 1772,-277.6 1669,-277.6"></polygon>
+<text text-anchor="middle" x="1720.5" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">batch-preview</text>
+</g>
+<g id="clust23" class="cluster">
+<title>cluster_21</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1668,-412.4 1668,-489.2 1757,-489.2 1757,-412.4 1668,-412.4"></polygon>
+<text text-anchor="middle" x="1712.5" y="-472.6" font-family="Arial" font-size="14.00" fill="#333333">upload-data</text>
+</g>
+<g id="clust24" class="cluster">
+<title>cluster_22</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1780,-277.6 1780,-354.4 1938,-354.4 1938,-277.6 1780,-277.6"></polygon>
+<text text-anchor="middle" x="1859" y="-337.8" font-family="Arial" font-size="14.00" fill="#333333">batch-results-container</text>
+</g>
+<g id="clust25" class="cluster">
+<title>cluster_23</title>
+<polygon fill="#b9c2ce" stroke="#000000" stroke-width="0" points="1775,-412.4 1775,-489.2 1883,-489.2 1883,-412.4 1775,-412.4"></polygon>
+<text text-anchor="middle" x="1829" y="-472.6" font-family="Arial" font-size="14.00" fill="#333333">process-button</text>
+</g>
+<!-- cb0 -->
+<g id="node1" class="node">
+<title>cb0</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="948" cy="-373.4" rx="11" ry="11"></ellipse>
+</g>
+<!-- manual&#45;output.children -->
+<g id="node9" class="node">
+<title>manual-output.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="980.5042,-321.6 915.4958,-321.6 915.4958,-285.6 980.5042,-285.6 980.5042,-321.6"></polygon>
+<text text-anchor="middle" x="948" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb0&#45;&gt;manual&#45;output.children -->
+<g id="edge2" class="edge">
+<title>cb0-&gt;manual-output.children</title>
+<path fill="none" stroke="#888888" d="M948,-362.1854C948,-354.0349 948,-342.6211 948,-332.0308"></path>
+<polygon fill="#888888" stroke="#888888" points="951.5001,-331.8664 948,-321.8665 944.5001,-331.8665 951.5001,-331.8664"></polygon>
+</g>
+<!-- cb1 -->
+<g id="node2" class="node">
+<title>cb1</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="948" cy="-238.6" rx="11" ry="11"></ellipse>
+</g>
+<!-- concentration&#45;data.children -->
+<g id="node11" class="node">
+<title>concentration-data.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="761.5042,-186.8 696.4958,-186.8 696.4958,-150.8 761.5042,-150.8 761.5042,-186.8"></polygon>
+<text text-anchor="middle" x="729" y="-164.6" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb1&#45;&gt;concentration&#45;data.children -->
+<g id="edge4" class="edge">
+<title>cb1-&gt;concentration-data.children</title>
+<path fill="none" stroke="#888888" d="M936.8821,-238.4205C903.1627,-237.7167 802.611,-234.3977 774,-219.6 762.9919,-213.9066 753.4327,-204.3153 745.9902,-194.9906"></path>
+<polygon fill="#888888" stroke="#888888" points="748.7939,-192.8956 740.0115,-186.9695 743.1815,-197.079 748.7939,-192.8956"></polygon>
+</g>
+<!-- manual&#45;welcome.className -->
+<g id="node12" class="node">
+<title>manual-welcome.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="890.7219,-186.8 805.2781,-186.8 805.2781,-150.8 890.7219,-150.8 890.7219,-186.8"></polygon>
+<text text-anchor="middle" x="848" y="-164.6" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb1&#45;&gt;manual&#45;welcome.className -->
+<g id="edge5" class="edge">
+<title>cb1-&gt;manual-welcome.className</title>
+<path fill="none" stroke="#888888" d="M937.4888,-235.3248C928.0314,-232.1145 913.9765,-226.6762 903,-219.6 891.9043,-212.447 880.956,-202.974 871.7844,-194.1476"></path>
+<polygon fill="#888888" stroke="#888888" points="874.0969,-191.5115 864.5339,-186.9507 869.1655,-196.4796 874.0969,-191.5115"></polygon>
+</g>
+<!-- manual&#45;error.className -->
+<g id="node13" class="node">
+<title>manual-error.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1083.7219,-186.8 998.2781,-186.8 998.2781,-150.8 1083.7219,-150.8 1083.7219,-186.8"></polygon>
+<text text-anchor="middle" x="1041" y="-164.6" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb1&#45;&gt;manual&#45;error.className -->
+<g id="edge6" class="edge">
+<title>cb1-&gt;manual-error.className</title>
+<path fill="none" stroke="#888888" d="M958.5577,-235.0325C967.3988,-231.7703 980.1203,-226.4192 990,-219.6 1000.3413,-212.4622 1010.4267,-203.0948 1018.8618,-194.3503"></path>
+<polygon fill="#888888" stroke="#888888" points="1021.5521,-196.5974 1025.8146,-186.8978 1016.4337,-191.8222 1021.5521,-196.5974"></polygon>
+</g>
+<!-- manual&#45;error.children -->
+<g id="node14" class="node">
+<title>manual-error.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="980.5042,-186.8 915.4958,-186.8 915.4958,-150.8 980.5042,-150.8 980.5042,-186.8"></polygon>
+<text text-anchor="middle" x="948" y="-164.6" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb1&#45;&gt;manual&#45;error.children -->
+<g id="edge7" class="edge">
+<title>cb1-&gt;manual-error.children</title>
+<path fill="none" stroke="#888888" d="M948,-227.3854C948,-219.2349 948,-207.8211 948,-197.2308"></path>
+<polygon fill="#888888" stroke="#888888" points="951.5001,-197.0664 948,-187.0665 944.5001,-197.0665 951.5001,-197.0664"></polygon>
+</g>
+<!-- manual&#45;deck.className -->
+<g id="node15" class="node">
+<title>manual-deck.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1193.7219,-186.8 1108.2781,-186.8 1108.2781,-150.8 1193.7219,-150.8 1193.7219,-186.8"></polygon>
+<text text-anchor="middle" x="1151" y="-164.6" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb1&#45;&gt;manual&#45;deck.className -->
+<g id="edge8" class="edge">
+<title>cb1-&gt;manual-deck.className</title>
+<path fill="none" stroke="#888888" d="M959.0834,-238.0484C989.142,-236.4161 1071.5869,-230.995 1096,-219.6 1108.6398,-213.7003 1120.3473,-203.8202 1129.683,-194.3335"></path>
+<polygon fill="#888888" stroke="#888888" points="1132.3648,-196.5899 1136.634,-186.8932 1127.2497,-191.8111 1132.3648,-196.5899"></polygon>
+</g>
+<!-- cb2 -->
+<g id="node3" class="node">
+<title>cb2</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="344" cy="-103.8" rx="11" ry="11"></ellipse>
+</g>
+<!-- imdd&#45;recommended.children -->
+<g id="node16" class="node">
+<title>imdd-recommended.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="139.5042,-52 74.4958,-52 74.4958,-16 139.5042,-16 139.5042,-52"></polygon>
+<text text-anchor="middle" x="107" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb2&#45;&gt;imdd&#45;recommended.children -->
+<g id="edge10" class="edge">
+<title>cb2-&gt;imdd-recommended.children</title>
+<path fill="none" stroke="#888888" d="M332.8506,-103.1716C294.3034,-100.9341 168.1454,-93.0471 152,-84.8 140.9632,-79.1624 131.3989,-69.5811 123.9603,-60.2487"></path>
+<polygon fill="#888888" stroke="#888888" points="126.7632,-58.1525 117.987,-52.2171 121.1463,-62.3299 126.7632,-58.1525"></polygon>
+</g>
+<!-- imdd&#45;performance.children -->
+<g id="node17" class="node">
+<title>imdd-performance.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="276.5042,-52 211.4958,-52 211.4958,-16 276.5042,-16 276.5042,-52"></polygon>
+<text text-anchor="middle" x="244" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb2&#45;&gt;imdd&#45;performance.children -->
+<g id="edge11" class="edge">
+<title>cb2-&gt;imdd-performance.children</title>
+<path fill="none" stroke="#888888" d="M333.1323,-101.7695C321.472,-99.2153 302.7738,-94.0073 289,-84.8 279.1007,-78.1827 270.0043,-68.8731 262.6196,-60.0281"></path>
+<polygon fill="#888888" stroke="#888888" points="265.3046,-57.7811 256.345,-52.1264 259.8227,-62.1342 265.3046,-57.7811"></polygon>
+</g>
+<!-- imdd&#45;header.color -->
+<g id="node18" class="node">
+<title>imdd-header.color</title>
+<polygon fill="#109dff" stroke="#109dff" points="459,-52 405,-52 405,-16 459,-16 459,-52"></polygon>
+<text text-anchor="middle" x="432" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">color</text>
+</g>
+<!-- cb2&#45;&gt;imdd&#45;header.color -->
+<g id="edge12" class="edge">
+<title>cb2-&gt;imdd-header.color</title>
+<path fill="none" stroke="#888888" d="M354.8793,-101.8191C366.0894,-99.3496 383.6261,-94.2516 396,-84.8 404.4157,-78.3718 411.6625,-69.4238 417.4025,-60.8261"></path>
+<polygon fill="#888888" stroke="#888888" points="420.5124,-62.453 422.8246,-52.1135 414.5693,-58.7544 420.5124,-62.453"></polygon>
+</g>
+<!-- imdd&#45;header.className -->
+<g id="node19" class="node">
+<title>imdd-header.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="386.7219,-52 301.2781,-52 301.2781,-16 386.7219,-16 386.7219,-52"></polygon>
+<text text-anchor="middle" x="344" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb2&#45;&gt;imdd&#45;header.className -->
+<g id="edge13" class="edge">
+<title>cb2-&gt;imdd-header.className</title>
+<path fill="none" stroke="#888888" d="M344,-92.5854C344,-84.4349 344,-73.0211 344,-62.4308"></path>
+<polygon fill="#888888" stroke="#888888" points="347.5001,-62.2664 344,-52.2665 340.5001,-62.2665 347.5001,-62.2664"></polygon>
+</g>
+<!-- cb3 -->
+<g id="node4" class="node">
+<title>cb3</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="729" cy="-103.8" rx="11" ry="11"></ellipse>
+</g>
+<!-- mi&#45;recommended.children -->
+<g id="node20" class="node">
+<title>mi-recommended.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="590.5042,-52 525.4958,-52 525.4958,-16 590.5042,-16 590.5042,-52"></polygon>
+<text text-anchor="middle" x="558" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb3&#45;&gt;mi&#45;recommended.children -->
+<g id="edge15" class="edge">
+<title>cb3-&gt;mi-recommended.children</title>
+<path fill="none" stroke="#888888" d="M717.9699,-103.1002C691.0658,-101.2421 622.8265,-95.5739 603,-84.8 592.2999,-78.9855 582.9045,-69.5852 575.5046,-60.4424"></path>
+<polygon fill="#888888" stroke="#888888" points="578.1145,-58.0911 569.2895,-52.2286 572.5324,-62.3149 578.1145,-58.0911"></polygon>
+</g>
+<!-- mi&#45;performance.children -->
+<g id="node21" class="node">
+<title>mi-performance.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="711.5042,-52 646.4958,-52 646.4958,-16 711.5042,-16 711.5042,-52"></polygon>
+<text text-anchor="middle" x="679" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb3&#45;&gt;mi&#45;performance.children -->
+<g id="edge16" class="edge">
+<title>cb3-&gt;mi-performance.children</title>
+<path fill="none" stroke="#888888" d="M722.4634,-94.6749C716.2435,-85.992 706.5787,-72.4999 697.9408,-60.4414"></path>
+<polygon fill="#888888" stroke="#888888" points="700.5653,-58.0949 691.8966,-52.0036 694.8747,-62.1713 700.5653,-58.0949"></polygon>
+</g>
+<!-- mi&#45;header.color -->
+<g id="node22" class="node">
+<title>mi-header.color</title>
+<polygon fill="#109dff" stroke="#109dff" points="894,-52 840,-52 840,-16 894,-16 894,-52"></polygon>
+<text text-anchor="middle" x="867" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">color</text>
+</g>
+<!-- cb3&#45;&gt;mi&#45;header.color -->
+<g id="edge17" class="edge">
+<title>cb3-&gt;mi-header.color</title>
+<path fill="none" stroke="#888888" d="M740.0216,-102.7962C763.1767,-100.5211 815.9791,-94.4115 831,-84.8 840.2189,-78.9011 847.7768,-69.7219 853.5456,-60.7798"></path>
+<polygon fill="#888888" stroke="#888888" points="856.6326,-62.4357 858.7132,-52.0471 850.6083,-58.8708 856.6326,-62.4357"></polygon>
+</g>
+<!-- mi&#45;header.className -->
+<g id="node23" class="node">
+<title>mi-header.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="821.7219,-52 736.2781,-52 736.2781,-16 821.7219,-16 821.7219,-52"></polygon>
+<text text-anchor="middle" x="779" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb3&#45;&gt;mi&#45;header.className -->
+<g id="edge18" class="edge">
+<title>cb3-&gt;mi-header.className</title>
+<path fill="none" stroke="#888888" d="M735.5366,-94.6749C741.7565,-85.992 751.4213,-72.4999 760.0592,-60.4414"></path>
+<polygon fill="#888888" stroke="#888888" points="763.1253,-62.1713 766.1034,-52.0036 757.4347,-58.0949 763.1253,-62.1713"></polygon>
+</g>
+<!-- cb4 -->
+<g id="node5" class="node">
+<title>cb4</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="1099" cy="-103.8" rx="11" ry="11"></ellipse>
+</g>
+<!-- se&#45;recommended.children -->
+<g id="node24" class="node">
+<title>se-recommended.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="1025.5042,-52 960.4958,-52 960.4958,-16 1025.5042,-16 1025.5042,-52"></polygon>
+<text text-anchor="middle" x="993" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb4&#45;&gt;se&#45;recommended.children -->
+<g id="edge20" class="edge">
+<title>cb4-&gt;se-recommended.children</title>
+<path fill="none" stroke="#888888" d="M1087.879,-102.1946C1075.0293,-99.9382 1053.6492,-94.9172 1038,-84.8 1028.0004,-78.3353 1018.8829,-69.0578 1011.5094,-60.1958"></path>
+<polygon fill="#888888" stroke="#888888" points="1014.195,-57.949 1005.2528,-52.2666 1008.6997,-62.2851 1014.195,-57.949"></polygon>
+</g>
+<!-- se&#45;performance.children -->
+<g id="node25" class="node">
+<title>se-performance.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="1131.5042,-52 1066.4958,-52 1066.4958,-16 1131.5042,-16 1131.5042,-52"></polygon>
+<text text-anchor="middle" x="1099" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb4&#45;&gt;se&#45;performance.children -->
+<g id="edge21" class="edge">
+<title>cb4-&gt;se-performance.children</title>
+<path fill="none" stroke="#888888" d="M1099,-92.5854C1099,-84.4349 1099,-73.0211 1099,-62.4308"></path>
+<polygon fill="#888888" stroke="#888888" points="1102.5001,-62.2664 1099,-52.2665 1095.5001,-62.2665 1102.5001,-62.2664"></polygon>
+</g>
+<!-- se&#45;header.color -->
+<g id="node26" class="node">
+<title>se-header.color</title>
+<polygon fill="#109dff" stroke="#109dff" points="1330,-52 1276,-52 1276,-16 1330,-16 1330,-52"></polygon>
+<text text-anchor="middle" x="1303" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">color</text>
+</g>
+<!-- cb4&#45;&gt;se&#45;header.color -->
+<g id="edge22" class="edge">
+<title>cb4-&gt;se-header.color</title>
+<path fill="none" stroke="#888888" d="M1109.9903,-103.0784C1145.1662,-100.6972 1253.4782,-92.7854 1267,-84.8 1276.4938,-79.1934 1284.1373,-69.9899 1289.8978,-60.9459"></path>
+<polygon fill="#888888" stroke="#888888" points="1293.0419,-62.5009 1295.0294,-52.0942 1286.986,-58.9901 1293.0419,-62.5009"></polygon>
+</g>
+<!-- se&#45;header.className -->
+<g id="node27" class="node">
+<title>se-header.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1257.7219,-52 1172.2781,-52 1172.2781,-16 1257.7219,-16 1257.7219,-52"></polygon>
+<text text-anchor="middle" x="1215" y="-29.8" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb4&#45;&gt;se&#45;header.className -->
+<g id="edge23" class="edge">
+<title>cb4-&gt;se-header.className</title>
+<path fill="none" stroke="#888888" d="M1109.9485,-101.9125C1122.636,-99.3909 1143.8641,-94.1212 1160,-84.8 1171.6071,-78.0949 1182.7879,-68.5484 1192.0022,-59.5377"></path>
+<polygon fill="#888888" stroke="#888888" points="1194.7316,-61.7539 1199.2459,-52.1689 1189.7397,-56.8467 1194.7316,-61.7539"></polygon>
+</g>
+<!-- cb5 -->
+<g id="node6" class="node">
+<title>cb5</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="1346" cy="-373.4" rx="11" ry="11"></ellipse>
+</g>
+<!-- manual&#45;input&#45;container.className -->
+<g id="node28" class="node">
+<title>manual-input-container.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1158.7219,-321.6 1073.2781,-321.6 1073.2781,-285.6 1158.7219,-285.6 1158.7219,-321.6"></polygon>
+<text text-anchor="middle" x="1116" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb5&#45;&gt;manual&#45;input&#45;container.className -->
+<g id="edge25" class="edge">
+<title>cb5-&gt;manual-input-container.className</title>
+<path fill="none" stroke="#888888" d="M1334.8812,-373.0979C1301.1494,-372.041 1200.4864,-367.8138 1171,-354.4 1158.3031,-348.624 1146.5865,-338.7639 1137.2593,-329.2587"></path>
+<polygon fill="#888888" stroke="#888888" points="1139.6919,-326.735 1130.3183,-321.7966 1134.5664,-331.5025 1139.6919,-326.735"></polygon>
+</g>
+<!-- manual&#45;output&#45;container.className -->
+<g id="node29" class="node">
+<title>manual-output-container.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1333.7219,-321.6 1248.2781,-321.6 1248.2781,-285.6 1333.7219,-285.6 1333.7219,-321.6"></polygon>
+<text text-anchor="middle" x="1291" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb5&#45;&gt;manual&#45;output&#45;container.className -->
+<g id="edge26" class="edge">
+<title>cb5-&gt;manual-output-container.className</title>
+<path fill="none" stroke="#888888" d="M1339.0342,-364.5598C1332.1763,-355.8565 1321.3601,-342.1298 1311.7266,-329.9039"></path>
+<polygon fill="#888888" stroke="#888888" points="1314.2476,-327.4482 1305.3093,-321.7598 1308.7493,-331.7806 1314.2476,-327.4482"></polygon>
+</g>
+<!-- batch&#45;input&#45;container.className -->
+<g id="node30" class="node">
+<title>batch-input-container.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1443.7219,-321.6 1358.2781,-321.6 1358.2781,-285.6 1443.7219,-285.6 1443.7219,-321.6"></polygon>
+<text text-anchor="middle" x="1401" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb5&#45;&gt;batch&#45;input&#45;container.className -->
+<g id="edge27" class="edge">
+<title>cb5-&gt;batch-input-container.className</title>
+<path fill="none" stroke="#888888" d="M1352.9658,-364.5598C1359.8237,-355.8565 1370.6399,-342.1298 1380.2734,-329.9039"></path>
+<polygon fill="#888888" stroke="#888888" points="1383.2507,-331.7806 1386.6907,-321.7598 1377.7524,-327.4482 1383.2507,-331.7806"></polygon>
+</g>
+<!-- batch&#45;output&#45;container.className -->
+<g id="node31" class="node">
+<title>batch-output-container.className</title>
+<polygon fill="#109dff" stroke="#109dff" points="1598.7219,-321.6 1513.2781,-321.6 1513.2781,-285.6 1598.7219,-285.6 1598.7219,-321.6"></polygon>
+<text text-anchor="middle" x="1556" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">className</text>
+</g>
+<!-- cb5&#45;&gt;batch&#45;output&#45;container.className -->
+<g id="edge28" class="edge">
+<title>cb5-&gt;batch-output-container.className</title>
+<path fill="none" stroke="#888888" d="M1357.1558,-372.9182C1388.2505,-371.4368 1475.2936,-366.3094 1501,-354.4 1513.6566,-348.5364 1525.3668,-338.6621 1534.7,-329.17"></path>
+<polygon fill="#888888" stroke="#888888" points="1537.385,-331.4227 1541.6481,-321.7234 1532.2669,-326.6473 1537.385,-331.4227"></polygon>
+</g>
+<!-- cb6 -->
+<g id="node7" class="node">
+<title>cb6</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="1713" cy="-373.4" rx="11" ry="11"></ellipse>
+</g>
+<!-- batch&#45;preview.children -->
+<g id="node33" class="node">
+<title>batch-preview.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="1745.5042,-321.6 1680.4958,-321.6 1680.4958,-285.6 1745.5042,-285.6 1745.5042,-321.6"></polygon>
+<text text-anchor="middle" x="1713" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb6&#45;&gt;batch&#45;preview.children -->
+<g id="edge30" class="edge">
+<title>cb6-&gt;batch-preview.children</title>
+<path fill="none" stroke="#888888" d="M1713,-362.1854C1713,-354.0349 1713,-342.6211 1713,-332.0308"></path>
+<polygon fill="#888888" stroke="#888888" points="1716.5001,-331.8664 1713,-321.8665 1709.5001,-331.8665 1716.5001,-331.8664"></polygon>
+</g>
+<!-- cb7 -->
+<g id="node8" class="node">
+<title>cb7</title>
+<ellipse fill="#00cc96" stroke="#00cc96" cx="1821" cy="-373.4" rx="11" ry="11"></ellipse>
+</g>
+<!-- batch&#45;results&#45;container.children -->
+<g id="node35" class="node">
+<title>batch-results-container.children</title>
+<polygon fill="#109dff" stroke="#109dff" points="1853.5042,-321.6 1788.4958,-321.6 1788.4958,-285.6 1853.5042,-285.6 1853.5042,-321.6"></polygon>
+<text text-anchor="middle" x="1821" y="-299.4" font-family="Arial" font-size="14.00" fill="#ffffff">children</text>
+</g>
+<!-- cb7&#45;&gt;batch&#45;results&#45;container.children -->
+<g id="edge32" class="edge">
+<title>cb7-&gt;batch-results-container.children</title>
+<path fill="none" stroke="#888888" d="M1821,-362.1854C1821,-354.0349 1821,-342.6211 1821,-332.0308"></path>
+<polygon fill="#888888" stroke="#888888" points="1824.5001,-331.8664 1821,-321.8665 1817.5001,-331.8665 1824.5001,-331.8664"></polygon>
+</g>
+<!-- manual&#45;output.children&#45;&gt;cb1 -->
+<g id="edge3" class="edge">
+<title>manual-output.children-&gt;cb1</title>
+<path fill="none" stroke="#888888" d="M948,-285.4939C948,-277.5537 948,-268.1771 948,-259.9034"></path>
+<polygon fill="#888888" stroke="#888888" points="951.5001,-259.8757 948,-249.8757 944.5001,-259.8758 951.5001,-259.8757"></polygon>
+</g>
+<!-- submit&#45;button.n_clicks -->
+<g id="node10" class="node">
+<title>submit-button.n_clicks</title>
+<polygon fill="#109dff" stroke="#109dff" points="980.7788,-456.4 915.2212,-456.4 915.2212,-420.4 980.7788,-420.4 980.7788,-456.4"></polygon>
+<text text-anchor="middle" x="948" y="-434.2" font-family="Arial" font-size="14.00" fill="#ffffff">n_clicks</text>
+</g>
+<!-- submit&#45;button.n_clicks&#45;&gt;cb0 -->
+<g id="edge1" class="edge">
+<title>submit-button.n_clicks-&gt;cb0</title>
+<path fill="none" stroke="#888888" d="M948,-420.2939C948,-412.3537 948,-402.9771 948,-394.7034"></path>
+<polygon fill="#888888" stroke="#888888" points="951.5001,-394.6757 948,-384.6757 944.5001,-394.6758 951.5001,-394.6757"></polygon>
+</g>
+<!-- concentration&#45;data.children&#45;&gt;cb2 -->
+<g id="edge9" class="edge">
+<title>concentration-data.children-&gt;cb2</title>
+<path fill="none" stroke="#888888" d="M696.1751,-163.2581C619.1521,-150.2542 428.5415,-118.0732 364.9955,-107.3447"></path>
+<polygon fill="#888888" stroke="#888888" points="365.4187,-103.8667 354.9756,-105.653 364.2534,-110.769 365.4187,-103.8667"></polygon>
+</g>
+<!-- concentration&#45;data.children&#45;&gt;cb3 -->
+<g id="edge14" class="edge">
+<title>concentration-data.children-&gt;cb3</title>
+<path fill="none" stroke="#888888" d="M729,-150.6939C729,-142.7537 729,-133.3771 729,-125.1034"></path>
+<polygon fill="#888888" stroke="#888888" points="732.5001,-125.0757 729,-115.0757 725.5001,-125.0758 732.5001,-125.0757"></polygon>
+</g>
+<!-- concentration&#45;data.children&#45;&gt;cb4 -->
+<g id="edge19" class="edge">
+<title>concentration-data.children-&gt;cb4</title>
+<path fill="none" stroke="#888888" d="M756.2569,-150.7311C761.9283,-147.6456 768.008,-144.7968 774,-142.8 830.8451,-123.8565 1014.563,-109.6589 1077.5645,-105.2423"></path>
+<polygon fill="#888888" stroke="#888888" points="1078.1299,-108.7118 1087.8656,-104.5325 1077.6486,-101.7283 1078.1299,-108.7118"></polygon>
+</g>
+<!-- tabs.active_tab -->
+<g id="node32" class="node">
+<title>tabs.active_tab</title>
+<polygon fill="#109dff" stroke="#109dff" points="1385.801,-456.4 1306.199,-456.4 1306.199,-420.4 1385.801,-420.4 1385.801,-456.4"></polygon>
+<text text-anchor="middle" x="1346" y="-434.2" font-family="Arial" font-size="14.00" fill="#ffffff">active_tab</text>
+</g>
+<!-- tabs.active_tab&#45;&gt;cb5 -->
+<g id="edge24" class="edge">
+<title>tabs.active_tab-&gt;cb5</title>
+<path fill="none" stroke="#888888" d="M1346,-420.2939C1346,-412.3537 1346,-402.9771 1346,-394.7034"></path>
+<polygon fill="#888888" stroke="#888888" points="1349.5001,-394.6757 1346,-384.6757 1342.5001,-394.6758 1349.5001,-394.6757"></polygon>
+</g>
+<!-- upload&#45;data.contents -->
+<g id="node34" class="node">
+<title>upload-data.contents</title>
+<polygon fill="#109dff" stroke="#109dff" points="1747.4117,-456.4 1678.5883,-456.4 1678.5883,-420.4 1747.4117,-420.4 1747.4117,-456.4"></polygon>
+<text text-anchor="middle" x="1713" y="-434.2" font-family="Arial" font-size="14.00" fill="#ffffff">contents</text>
+</g>
+<!-- upload&#45;data.contents&#45;&gt;cb6 -->
+<g id="edge29" class="edge">
+<title>upload-data.contents-&gt;cb6</title>
+<path fill="none" stroke="#888888" d="M1713,-420.2939C1713,-412.3537 1713,-402.9771 1713,-394.7034"></path>
+<polygon fill="#888888" stroke="#888888" points="1716.5001,-394.6757 1713,-384.6757 1709.5001,-394.6758 1716.5001,-394.6757"></polygon>
+</g>
+<!-- process&#45;button.n_clicks -->
+<g id="node36" class="node">
+<title>process-button.n_clicks</title>
+<polygon fill="#109dff" stroke="#109dff" points="1853.7788,-456.4 1788.2212,-456.4 1788.2212,-420.4 1853.7788,-420.4 1853.7788,-456.4"></polygon>
+<text text-anchor="middle" x="1821" y="-434.2" font-family="Arial" font-size="14.00" fill="#ffffff">n_clicks</text>
+</g>
+<!-- process&#45;button.n_clicks&#45;&gt;cb7 -->
+<g id="edge31" class="edge">
+<title>process-button.n_clicks-&gt;cb7</title>
+<path fill="none" stroke="#888888" d="M1821,-420.2939C1821,-412.3537 1821,-402.9771 1821,-394.7034"></path>
+<polygon fill="#888888" stroke="#888888" points="1824.5001,-394.6757 1821,-384.6757 1817.5001,-394.6758 1824.5001,-394.6757"></polygon>
+</g>
+</g>
+</svg>

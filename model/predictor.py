@@ -19,14 +19,14 @@ class Predictor:
         self.mi_model = pickle.load(
             open(os.path.join(curr_dir, 'mi-cv.sav'), 'rb'))
 
-    def predict_imdd(self, data: pd.DataFrame) -> float:
-        return self.imdd_model.predict(data)[0]
+    def predict_imdd(self, data: pd.DataFrame):
+        return self.imdd_model.predict(data)
 
-    def predict_se(self, data: pd.DataFrame) -> float:
-        return self.se_model.predict(data)[0]
+    def predict_se(self, data: pd.DataFrame):
+        return self.se_model.predict(data)
 
-    def predict_mi(self, data: pd.DataFrame) -> float:
-        return self.mi_model.predict(data)[0]
+    def predict_mi(self, data: pd.DataFrame):
+        return self.mi_model.predict(data)
 
     def predict(self, **kwargs):
         data = {
@@ -47,8 +47,35 @@ class Predictor:
         }
         data = pd.DataFrame(data)
         result = {
-            "imdd": min(max(0, self.predict_imdd(data)), 4) / 4 * 100,
-            "mi"  : min(max(0, self.predict_mi(data)), 4) / 4 * 100,
-            "se"  : min(max(0, self.predict_se(data)), 4) / 4 * 100,
+            "imdd": min(max(0, self.predict_imdd(data))[0], 4) / 4 * 100,
+            "mi"  : min(max(0, self.predict_mi(data))[0], 4) / 4 * 100,
+            "se"  : min(max(0, self.predict_se(data))[0], 4) / 4 * 100,
         }
+        return result
+
+    def predict_batch(self, data: pd.DataFrame) -> pd.DataFrame:
+        data.rename(columns={
+            'calculus1': "INF0131",
+            'discrete_math': "INF0221",
+            'intro_to_it': "INF0381",
+            'prolog': "INF0011",
+            'calculus2': "INF0141",
+            'data_structure': "INF0621",
+            'java': "INF0301",
+            'mis': "INF0531",
+            'stats': "INF0601",
+            'algo_analysis': "INF0031",
+            'computer_arch': "INF0271",
+            'database': "INF0521",
+            'linear_algebra': "INF0021",
+            'oop': "INF0291",
+        })
+        result = data.copy()
+        result["No"] = range(1, len(data) + 1)
+        result["IMDD"] = [min(max(0, x), 4) / 4 * 100 for x in self.predict_imdd(data)]
+        result["SE"] = [min(max(0, x), 4) / 4 * 100 for x in self.predict_mi(data)]
+        result["MI"] = [min(max(0, x), 4) / 4 * 100 for x in self.predict_se(data)]
+        result.set_index('No')
+        result["Recommended"] = result[["IMDD", "SE", "MI"]].idxmax(axis=1)
+        result = result[["No", "IMDD", "SE", "MI", "Recommended"]]
         return result

@@ -235,7 +235,8 @@ def register_callbacks(app: Dash):
         try:
             decoded = base64.b64decode(contents.split("base64,")[1])
             df = pd.read_csv(io.StringIO(decoded.decode('utf-8')))
-            csv_string = df.to_csv(index=False, encoding='utf-8')
+            result_df = predictor.predict_batch(df)
+            csv_string = result_df.to_csv(index=False, encoding='utf-8')
             csv_string = "data:text/csv;charset=utf-8," + urllib.parse.quote(csv_string)
             return [
                 html.A(
@@ -245,7 +246,7 @@ def register_callbacks(app: Dash):
                     target="_blank",
                     className="btn btn-primary text-white mt-3",
                 ),
-                BatchTable.render(df),
+                BatchTable.render(result_df),
             ]
         except Exception as e:
             return dbc.Alert("There is an error in processing your data: " + str(e), color="danger")
