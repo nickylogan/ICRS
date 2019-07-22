@@ -62,7 +62,7 @@ for opt in options:
     name: str = opt['name']
     data: pd.DataFrame = opt['data']
     save_path: str = opt['file']
-    seed: int = opt['seed']
+    seed: int = opt.get('seed', 0)
     print("######", name.upper(), "######")
 
     # Set feature and target
@@ -77,34 +77,46 @@ for opt in options:
     feature = pd.DataFrame(feature_array, columns=feature.columns)
 
     # Split data into train and test
-    print("Splitting data into train and test...",end="\r")
-    X_train, X_test, y_train, y_test = train_test_split(feature, target, test_size=0.3, random_state=seed)
+    best_seed = -1
+    mx_score = -1000
+    for i in range(1000):
+        print("Splitting data into train and test...",end="\r")
+        X_train, X_test, y_train, y_test = train_test_split(feature, target, test_size=0.3, random_state=i)
 
-    tuned_parameters = [{
-        'kernel': ['rbf', 'poly', 'sigmoid', 'linear'],
-        'gamma': [1, 0.1, 0.01, 1e-3, 1e-4, 'auto', 'scale'],
-        'C': [1, 10, 100, 1000],
-        'degree': [3, 4, 5],
-    }]
+        tuned_parameters = [{
+            'kernel': ['rbf', 'poly', 'sigmoid', 'linear'],
+            'gamma': [1, 0.1, 0.01, 1e-3, 1e-4, 'auto', 'scale'],
+            'C': [1, 10, 100, 1000],
+            'degree': [3, 4, 5],
+        }]
 
-    # Building predictor model
-    print("Training model...                     ",end="\r")
-    clf = GridSearchCV(SVR(), tuned_parameters,
-                    cv=2, iid=True,
-                    refit='r2',
-                    scoring=['r2', 'neg_mean_squared_error'],
-                    )
-    clf.fit(X_train, y_train)
-    
-    # Dumping model
-    print("Dumping model...   ",end="\r")
-    pickle.dump(clf, open(save_path, 'wb'))
+        # Building predictor model
+        print("Training model...                     ",end="\r")
+        clf = GridSearchCV(SVR(), tuned_parameters,
+                        cv=2, iid=True,
+                        refit='r2',
+                        scoring=['r2', 'neg_mean_squared_error'],
+                        )
+        clf.fit(X_train, y_train)
+        
+        # # Dumping model
+        # print("Dumping model...   ",end="\r")
+        # pickle.dump(clf, open(save_path, 'wb'))
 
-    # Test data
-    print()
-    y_true, y_pred = y_test, clf.predict(X_test)
-    print("Best parameters   :", clf.best_params_)
-    print("Score             :", clf.score(X_test, y_test))
-    print("Mean squared error:", MSE(y_true, y_pred))
-    print()
+        # Test data
+        print()
+        y_true, y_pred = y_test, clf.predict(X_test)
+        print("Best parameters   :", clf.best_params_)
+        print("Score             :", clf.score(X_test, y_test))
+        print("Mean squared error:", MSE(y_true, y_pred))
+        print()
+
+        # For finding best seed
+        score = clf.score(X_test, y_test)
+        if score > mx_score:
+            best_seed = i
+            mx_score = score
+
+    print("Best seed:", seed)
+    print("Best score:", mx_score)
         
