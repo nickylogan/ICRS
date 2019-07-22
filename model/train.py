@@ -62,7 +62,7 @@ for opt in options:
     name: str = opt['name']
     data: pd.DataFrame = opt['data']
     save_path: str = opt['file']
-    seed: int = opt['seed']
+    seed: int = opt.get('seed', 0)
     print("######", name.upper(), "######")
 
     # Set feature and target
