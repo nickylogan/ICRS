@@ -61,13 +61,13 @@ There are several libraries used for this project, all of them are listed in `re
 
 > **Make sure the virtual environment is still activated**
 
-The app was built using [Dash](https://dash.plot.ly/). To run the app locally, run the following command from the `app` directory:
+The app was built using [Dash](https://dash.plot.ly/). To run the app locally, run the following command from the project root directory:
 
 ```sh
-(myvenv) $ python app.py
+(myvenv) $ python main.py
 Running on http://127.0.0.1:8050/
 Debugger PIN: XXX-XXX-XXX
- * Serving Flask app "app" (lazy loading)
+ * Serving Flask app "main" (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
@@ -101,9 +101,8 @@ The prediction model is trained using a variant of Support Vector Machine (SVM) 
 
 ### Frontend development using Dash
 
-The app lives inside the `app` directory. As you can see, there are four main python files:
+The entry point of the web application is on `main.py`. Other components live inside the `app` directory, containing three main python files:
 
-* `app.py`: The entry point of the web application
 * `callbacks.py`: Dash callbacks to register, so that data can flow between components
 * `components.py`: UI components
 * `layout.py`: Contains the main layout for the whole app

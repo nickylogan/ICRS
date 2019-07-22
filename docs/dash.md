@@ -6,18 +6,17 @@ An additional library is used on top of the existing dash components, called [da
 
 ## Codebase structure
 
-The dash app lives inside the `app` directory. Below is a table that explains the four main files:
+The entry point of the web application is on `main.py`. Other components live inside the `app` directory, containing three main python files:
 
 | File            | Description                                |
 | --------------- | ------------------------------------------ |
-| `app.py`        | The entry point of the web application     |
 | `layout.py`     | Contains the main layout for the whole app |
 | `components.py` | UI components                              |
 | `callbacks.py`  | Dash callbacks                             |
 
-## `app.py`
+## `main.py`
 
-As you may already know, the web application's entry point is from `app.py`. Let's examine it a bit more.
+As you may already know, the web application's entry point is from `main.py`. Let's examine it a bit more.
 
 The code snippet below shows import statements in the beginning of the script. The first three allows us to use `dash` and `dash-bootstrap-components`. The last two are from our own scripts&mdash;we'll explain them later.
 
@@ -42,7 +41,7 @@ app.config['suppress_callback_exceptions'] = True
 
 As you can see above, we called the `Root()` function. In short, it returns the main layout of the app's look. This way, we can avoid cluttering the script file with HTML components.
 
-Once the app is configured, data callbacks are registered. `register_callbacks()` is a custom-made function, so that callback registration can be separated into another file. We'll explain [later]() why it takes the `app` as an argument.
+Once the app is configured, data callbacks are registered. `register_callbacks()` is a custom-made function, so that callback registration can be separated into another file. We'll explain [later](#callbackspy) why it takes the `app` as an argument.
 
 ```python
 # register_calbacks registers app callbacks, which are necessary
