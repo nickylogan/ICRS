@@ -107,7 +107,7 @@ You can download the template for the allowed csv format on the "Download templa
 
 Once the csv file is ready, you can upload the file to the provided area:
 
-![usage-upload](img/screenshots/usage-2.gif)
+![usage-upload](img/screenshots/usage-2b.gif)
 
 You can view the first 5 rows of the data. By clicking the "Process data" button, the file will be processed and outputted below:
 

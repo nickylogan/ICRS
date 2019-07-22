@@ -215,6 +215,7 @@ def register_callbacks(app: Dash):
             df = pd.read_csv(io.StringIO(decoded.decode('utf-8')))
             df = df.head()
             return [
+                html.Small("Only the first 5 rows are shown"),
                 BatchTable.render(df),
                 dbc.Button("Process data",
                             outline=True, color="primary", id="process-button", className="mt-3 mb-5")
