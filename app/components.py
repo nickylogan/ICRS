@@ -4,6 +4,7 @@ from typing import List, Tuple
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
+import pandas as pd
 
 CourseList = List[Tuple[str, str]]
 
@@ -119,10 +120,8 @@ class BatchInputContainer:
                         ),
                         html.Br(),
                         dbc.Button([
-                            "Select a",
-                            html.Code(" .csv "),
-                            "file"
-                        ], color="link", className="p-0 mt-3"),
+                            "Click to upload a ", html.Code(" .csv ")," file"
+                        ], color="link", className="p-0"),
                         html.Br(),
                         html.Small(
                             'Maximum size: 2MB',
@@ -136,10 +135,14 @@ class BatchInputContainer:
                         'borderStyle': 'dashed',
                     },
                     className="py-5 text-center",
+                    className_active="bg-secondary",
+                    className_reject="bg-danger text-white",
                     accept='.csv',
-                    max_size=2000,
+                    max_size=2000000,
                 )
-            )
+            ),
+            dbc.Col(html.H3("Data Preview"), className="mt-4"),
+            dbc.Col(id="batch-preview"),
         ]
         return dbc.Row(element, id="batch-input-container")
 
@@ -172,7 +175,7 @@ class ScoreInput:
     def render(id):
         element = dcc.Dropdown(
             options=[
-                {'label': '-', 'value':  -1},
+                {'label': '-', 'value': -1},
                 {'label': 'A', 'value':  0},
                 {'label': 'A-', 'value': 1},
                 {'label': 'B+', 'value': 2},
@@ -206,6 +209,7 @@ class RecommendationContainer:
                 className="mt-4"
             ),
             ManualOutputContainer.render(),
+            BatchOutputContainer.render(),
         ]
         return html.Div(element)
 
@@ -231,10 +235,11 @@ class ManualOutputContainer:
                 id="manual-deck",
                 className="d-none",
             ),
-        ], 
+        ],
             id="manual-output-container"
         )
         return element
+
 
 class IMDDHeader:
     @staticmethod
@@ -297,5 +302,36 @@ class SEHeader:
             id="se-header",
             color="secondary",
             className="text-primary"
+        )
+        return element
+
+
+class BatchOutputContainer:
+    @staticmethod
+    def render():
+        element = html.Div(
+            dbc.Row(
+                dbc.Col(
+                    html.P("Predicted results for your data will appear here"),
+                    id="batch-results-container"
+                ),
+            ),
+            id="batch-output-container"
+        )
+        return element
+
+
+class BatchTable:
+    @staticmethod
+    def render(df: pd.DataFrame):
+        element = dbc.Table.from_dataframe(
+            df=df,
+            striped=True,
+            float_format=".2f",
+            id="batch-table",
+            size="sm",
+            responsive=True,
+            hover=True,
+            className="mt-3",
         )
         return element

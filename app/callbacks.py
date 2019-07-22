@@ -1,13 +1,19 @@
+import base64
+import io
 import json
+import urllib
 
 import dash_html_components as html
+import dash_bootstrap_components as dbc
+import pandas as pd
 from dash import Dash
 from dash.dependencies import Input, Output, State
-from dash.development.base_component import Component
 
 from model.predictor import Predictor
 
-from .components import ManualInputContainer, ManualOutputContainer, BatchInputContainer
+from .components import (
+    BatchInputContainer, BatchTable, ManualInputContainer,
+    ManualOutputContainer)
 
 
 def register_callbacks(app: Dash):
@@ -90,7 +96,7 @@ def register_callbacks(app: Dash):
 
         if error:
             return "", "d-none", "d-block", error, "d-none"
-        
+
         if not data:
             return "", "d-block", "d-none", "", "d-none"
 
@@ -182,13 +188,64 @@ def register_callbacks(app: Dash):
             Output("manual-input-container", "className"),
             Output("manual-output-container", "className"),
             Output("batch-input-container", "className"),
+            Output("batch-output-container", "className"),
         ],
         [Input("tabs", "active_tab")]
     )
     def render_tab_content(tab: str):
         if tab == "playground":
-            return "d-block", "d-block", "d-none"
+            return "d-block", "d-block", "d-none", "d-none"
         if tab == "batch":
-            return "d-none", "d-none", "d-block"
+            return "d-none", "d-none", "d-block", "d-block"
 
-        return "d-none", "d-none", "d-none"
+        return "d-none", "d-none", "d-none", "d-none"
+
+    @app.callback(
+        Output("batch-preview", "children"),
+        [Input('upload-data', 'contents')],
+        [State('upload-data', 'filename'),
+         State('upload-data', 'last_modified')]
+    )
+    def preview_data(contents, filename, last_modified):
+        if not filename:
+            return html.P("The preview of your data will appear here")
+
+        try:
+            decoded = base64.b64decode(contents.split("base64,")[1])
+            df = pd.read_csv(io.StringIO(decoded.decode('utf-8')))
+            df = df.head()
+            return [
+                BatchTable.render(df),
+                dbc.Button("Process data",
+                            outline=True, color="primary", id="process-button", className="mt-3 mb-5")
+            ]
+        except Exception as e:
+            return dbc.Alert("There is an error in uploading your data", color="danger")
+
+
+    @app.callback(
+        Output("batch-results-container", "children"),
+        [Input("process-button", "n_clicks")],
+        [State("upload-data", "contents")],
+    )
+    def process_batch(n_clicks, contents):
+        if not n_clicks or n_clicks == 0:
+            return html.P("Predicted results for your data will appear here")
+        
+        try:
+            decoded = base64.b64decode(contents.split("base64,")[1])
+            df = pd.read_csv(io.StringIO(decoded.decode('utf-8')))
+            csv_string = df.to_csv(index=False, encoding='utf-8')
+            csv_string = "data:text/csv;charset=utf-8," + urllib.parse.quote(csv_string)
+            return [
+                html.A(
+                    "Download results",
+                    href=csv_string,
+                    download="results.csv",
+                    target="_blank",
+                    className="btn btn-primary text-white mt-3",
+                ),
+                BatchTable.render(df),
+            ]
+        except Exception as e:
+            return dbc.Alert("There is an error in processing your data: " + str(e), color="danger")
