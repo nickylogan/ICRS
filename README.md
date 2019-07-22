@@ -83,17 +83,21 @@ You can open the app on the browser by accessing `http://127.0.0.1:8050/`.
 
 ### Playground
 
-You will be greeted with a screen similar like the image below. Here, you can manually input scores yourself by using the available dropdowns.
+You will be greeted with a screen similar like the image below.
 
 ![initial](img/screenshots/initial.png)
 
-Once selected, you can click the button labeled "Pick a concentration for me!" to output the prediction. It will output something like this:
+Here, you can manually input scores yourself by using the available dropdowns.
+
+![dropdown](img/screenshots/dropdown.gif)
+
+Once finished, you can click the button labeled "Pick a concentration for me!" to output the prediction. It will output something like this:
 
 ![usage-1](img/screenshots/usage-1.gif)
 
 ### Batch Processor
 
-Another feature is available, that is to batch process a .csv file. When clicking the "Batch Processor" tab on top, you will be greeted with a screen like this:
+Another feature is available, which is to batch process a .csv file. When clicking the "Batch Processor" tab on top, you will be greeted with a screen like this:
 
 ![initial-batch](img/screenshots/initial-batch.png)
 
