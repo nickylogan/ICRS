@@ -95,6 +95,8 @@ The data were gathered from UPH's database for all students, including alumnis f
 
 The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [***here***](notebooks/preprocess.ipynb).
 
+<img src="img/DataCleansing.svg" height="200">
+
 ### Model training + test
 
 The prediction model is trained using a variant of Support Vector Machine (SVM) called Support Vector Regression (SVR). Its parameters are tuned using GridSearch. Full explanation can be seen [***here***](docs/model.md)
