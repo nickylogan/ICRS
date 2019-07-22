@@ -39,19 +39,19 @@ options = [
     {
         'name': 'imdd',
         'data': data_imdd,
-        'file': 'imdd-cv.sav',
+        'file': 'imdd.sav',
         'seed': 260,
     },
     {
         'name': 'se',
         'data': data_se,
-        'file': 'se-cv.sav',
+        'file': 'se.sav',
         'seed': 820,
     },
     {
         'name': 'mi',
         'data': data_mi,
-        'file': 'mi-cv.sav',
+        'file': 'mi.sav',
         'seed': 903,
     },
 ]
