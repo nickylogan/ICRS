@@ -81,12 +81,10 @@ for opt in options:
     X_train, X_test, y_train, y_test = train_test_split(feature, target, test_size=0.3, random_state=seed)
 
     tuned_parameters = [{
-        'kernel': ['rbf', 'poly', 'sigmoid'],
-        'gamma': [1e-3, 1e-4, 'auto', 'scale'],
-        'C': [1, 10, 100, 1000]
-    }, {
-        'kernel': ['linear'],
-        'C': [1, 10, 100, 1000]
+        'kernel': ['rbf', 'poly', 'sigmoid', 'linear'],
+        'gamma': [1, 0.1, 0.01, 1e-3, 1e-4, 'auto', 'scale'],
+        'C': [1, 10, 100, 1000],
+        'degree': [3, 4, 5],
     }]
 
     # Building predictor model
