@@ -81,7 +81,35 @@ You can open the app on the browser by accessing `http://127.0.0.1:8050/`.
 
 ## Usage
 
-// TODO: add screenshots and explanation
+### Playground
+
+You will be greeted with a screen similar like the image below. Here, you can manually input scores yourself by using the available dropdowns.
+
+![initial](img/screenshots/initial.png)
+
+Once selected, you can click the button labeled "Pick a concentration for me!" to output the prediction. It will output something like this:
+
+![usage-1](img/screenshots/usage-1.gif)
+
+### Batch Processor
+
+Another feature is available, that is to batch process a .csv file. When clicking the "Batch Processor" tab on top, you will be greeted with a screen like this:
+
+![initial-batch](img/screenshots/initial-batch.png)
+
+You can download the template for the allowed csv format on the "Download template" button:
+
+![usage-download](img/screenshots/usage-2a.gif)
+
+Once the csv file is ready, you can upload the file to the provided area:
+
+![usage-upload](img/screenshots/usage-2.gif)
+
+You can view the first 5 rows of the data. By clicking the "Process data" button, the file will be processed and outputted below:
+
+![usage-process](img/screenshots/usage-3.gif)
+
+As you may see, a "Download results" button is provided to download the results as a `.csv` file.
 
 ## Implementation steps
 
