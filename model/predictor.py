@@ -13,11 +13,11 @@ class Predictor:
     def __init__(self):
         curr_dir = os.path.dirname(os.path.realpath(__file__))
         self.imdd_model = pickle.load(
-            open(os.path.join(curr_dir, 'imdd.sav'), 'rb'))
+            open(os.path.join(curr_dir, 'imdd-cv.sav'), 'rb'))
         self.se_model = pickle.load(
-            open(os.path.join(curr_dir, 'se.sav'), 'rb'))
+            open(os.path.join(curr_dir, 'se-cv.sav'), 'rb'))
         self.mi_model = pickle.load(
-            open(os.path.join(curr_dir, 'mi.sav'), 'rb'))
+            open(os.path.join(curr_dir, 'mi-cv.sav'), 'rb'))
 
     def predict_imdd(self, data: pd.DataFrame) -> float:
         return self.imdd_model.predict(data)[0]
@@ -47,8 +47,8 @@ class Predictor:
         }
         data = pd.DataFrame(data)
         result = {
-            "iim": min(max(0, self.predict_imdd(data)), 4) / 4 * 100,
-            "mi": min(max(0, self.predict_mi(data)), 4) / 4 * 100,
-            "se": min(max(0, self.predict_se(data)), 4) / 4 * 100,
+            "imdd": min(max(0, self.predict_imdd(data)), 4) / 4 * 100,
+            "mi"  : min(max(0, self.predict_mi(data)), 4) / 4 * 100,
+            "se"  : min(max(0, self.predict_se(data)), 4) / 4 * 100,
         }
         return result

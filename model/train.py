@@ -52,7 +52,7 @@ options = [
         'name': 'mi',
         'data': data_mi,
         'file': 'mi-cv.sav',
-        'seed': 850,
+        'seed': 903,
     },
 ]
 
@@ -70,15 +70,16 @@ for opt in options:
     feature: pd.DataFrame = data.filter(items=general_courses)
 
     # Impute missing data
+    print("Imputing missing data...", end="\r")
     imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
-    print("Imputing missing data...",end="\r")
     imputer.fit(feature)
     feature_array = imputer.transform(feature)
     feature = pd.DataFrame(feature_array, columns=feature.columns)
 
     # Split data into train and test
-    print("Splitting data into train and test...",end="\r")
-    X_train, X_test, y_train, y_test = train_test_split(feature, target, test_size=0.3, random_state=seed)
+    print("Splitting data into train and test...", end="\r")
+    X_train, X_test, y_train, y_test = train_test_split(
+        feature, target, test_size=0.3, random_state=seed)
 
     tuned_parameters = [{
         'kernel': ['rbf', 'poly', 'sigmoid', 'linear'],
@@ -88,16 +89,16 @@ for opt in options:
     }]
 
     # Building predictor model
-    print("Training model...                     ",end="\r")
+    print("Training model...                     ", end="\r")
     clf = GridSearchCV(SVR(), tuned_parameters,
-                    cv=2, iid=True,
-                    refit='r2',
-                    scoring=['r2', 'neg_mean_squared_error'],
-                    )
+                       cv=2, iid=True,
+                       refit='r2',
+                       scoring=['r2', 'neg_mean_squared_error'],
+                       )
     clf.fit(X_train, y_train)
-    
+
     # Dumping model
-    print("Dumping model...   ",end="\r")
+    print("Dumping model...   ", end="\r")
     pickle.dump(clf, open(save_path, 'wb'))
 
     # Test data
@@ -107,4 +108,3 @@ for opt in options:
     print("Score             :", clf.score(X_test, y_test))
     print("Mean squared error:", MSE(y_true, y_pred))
     print()
-        
