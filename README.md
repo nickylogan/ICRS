@@ -79,6 +79,10 @@ Debugger PIN: XXX-XXX-XXX
 
 You can open the app on the browser by accessing `http://127.0.0.1:8050/`.
 
+## Usage
+
+// TODO: add screenshots and explanation
+
 ## Implementation steps
 
 <img src="img/diagram.svg" height="400">
@@ -87,9 +91,7 @@ The diagram above shows several major steps in the whole development process, ea
 
 ### Data acquisition
 
-The data were gathered from UPH's database for all students, including alumnis from previous years. The gathered students' data were from cohorts 2012 until 2015.
-
-// TODO: add more
+With permission from UPH, the data were gathered from their database for all students, including alumnis from previous years. The gathered Informatics students' data were from cohorts 2012 until 2015. Along with them, past curriculum structures were also given.
 
 ### Data cleansing
 
@@ -103,10 +105,11 @@ The prediction model is trained using a variant of Support Vector Machine (SVM) 
 
 ### Frontend development using Dash
 
-The entry point of the web application is on `main.py`. Other components live inside the `app` directory, containing three main python files:
+The entry point of the web application is on `main.py`. Other components live inside the `app` directory, containing four main python files:
 
 * `callbacks.py`: Dash callbacks to register, so that data can flow between components
 * `components.py`: UI components
+* `routes.py`: Flask routes
 * `layout.py`: Contains the main layout for the whole app
 
 If you want to understand the app's code in detail, you might wanna look [***here***](docs/dash.md) or read the code yourself.
@@ -126,7 +129,7 @@ def predict(data):
 
 ### Visualize and predict data
 
-// TODO: add content
+Once everything is done, the app is ready to use. Example outputs and visualizations can be seen in the [previous chapter](#usage)
 
 ## Authors
 

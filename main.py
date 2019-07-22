@@ -12,8 +12,6 @@ app.layout = html.Div(Root())
 app.title = 'Playground | ICRS'
 app.config['suppress_callback_exceptions'] = True
 
-# register_calbacks registers app callbacks, which are necessary
-# for data flow between components
 register_callbacks(app)
 
 register_routes(app)
