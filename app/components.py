@@ -1,8 +1,9 @@
+from random import randint
+from typing import List, Tuple
+
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
-import dash_bootstrap_components as dbc
-from typing import List, Tuple
-from random import randint
 
 CourseList = List[Tuple[str, str]]
 
@@ -30,6 +31,7 @@ curriculum: CourseList = {
     ]
 }
 
+
 class Header:
     @staticmethod
     def render():
@@ -37,8 +39,10 @@ class Header:
             dbc.Row([
                 dbc.Col([
                     html.H1("Informatics Concentration Recommender System (ICRS)"),
-                    html.P("It is often hard to choose the concentration for your major. If you're an UPH Informatics major student, you're in luck!"),
-                    html.P("Input your courses' scores below and we'll recommend the best suited concentration for you.")
+                    html.P(
+                        "It is often hard to choose the concentration for your major. If you're an UPH Informatics major student, you're in luck!"),
+                    html.P(
+                        "Input your courses' scores below and we'll recommend the best suited concentration for you.")
                 ], md=6),
             ],
                 className="mt-5"
@@ -46,7 +50,25 @@ class Header:
         ]
         return html.Div(element)
 
-class TermCardContainer:
+
+class Tabs:
+    @staticmethod
+    def render():
+        element = dbc.Tabs(
+            [
+                dbc.Tab(label="Playground", tab_id="playground",
+                        tab_style={'cursor': 'pointer'}),
+                dbc.Tab(label="Batch Processor", tab_id="batch",
+                        tab_style={'cursor': 'pointer'}),
+            ],
+            id="tabs",
+            active_tab="playground",
+            className="mt-3 mb-5",
+        )
+        return element
+
+
+class InputContainer:
     @staticmethod
     def render():
         element = [
@@ -54,11 +76,20 @@ class TermCardContainer:
                 dbc.Col(
                     html.H2("Score Input"),
                 ),
-                className="mt-4"
+                className="mt-4 mb-2"
             ),
+            html.Div(id="input-content")
+        ]
+        return html.Div(element)
+
+
+class ManualInputContainer:
+    @staticmethod
+    def render():
+        element = [
             dbc.Row([
                 dbc.Col(TermCard.render(title, courses), md=4) for title, courses in curriculum.items()
-            ], className="mt-3"),
+            ]),
             dbc.Row(
                 dbc.Col(
                     dbc.Button("Pick a concentration for me!",
@@ -69,6 +100,43 @@ class TermCardContainer:
         ]
         return html.Div(element)
 
+
+class BatchInputContainer:
+    @staticmethod
+    def render():
+        element = [
+            dbc.Button("Download template", color="link",
+                       style={'textDecoration': 'underline'}),
+            dbc.Col(
+                dcc.Upload(
+                    id='upload-data',
+                    children=html.Div([
+                        html.Span(
+                            'DRAG AND DROP OR',
+                            className="text-primary",
+                            style={'fontSize': '0.765625rem'}
+                        ),
+                        html.Br(),
+                        dbc.Button([
+                            "Select a",
+                            html.Code(" .csv "),
+                            "file"
+                        ], color="link", className="p-0 mt-3"),
+                    ]),
+                    style={
+                        'width': '100%',
+                        'borderWidth': '1px',
+                        'borderStyle': 'dashed',
+                    },
+                    className="py-3 text-center",
+                    accept='.csv',
+                    max_size=2000,
+                )
+            )
+        ]
+        return dbc.Row(element)
+
+
 class TermCard:
     @staticmethod
     def render(title, courses: CourseList):
@@ -76,9 +144,11 @@ class TermCard:
             dbc.CardBody([
                 html.H4(title, className="card-title text-white mb-0"),
             ]),
-            dbc.ListGroup([CourseInput.render(course[0], course[1]) for course in courses], flush=True)
+            dbc.ListGroup([CourseInput.render(course[0], course[1])
+                           for course in courses], flush=True)
         ], color="primary text-primary mt-3")
         return element
+
 
 class CourseInput:
     @staticmethod
@@ -89,11 +159,13 @@ class CourseInput:
         ], className="d-flex justify-content-between align-items-center")
         return element
 
+
 class ScoreInput:
     @staticmethod
     def render(id):
         element = dcc.Dropdown(
             options=[
+                {'label': '-', 'value':  -1},
                 {'label': 'A', 'value':  0},
                 {'label': 'A-', 'value': 1},
                 {'label': 'B+', 'value': 2},
@@ -108,9 +180,10 @@ class ScoreInput:
             id="input-" + id,
             className="dropdown-group",
             clearable=False,
-            value=randint(0, 9)
+            value=-1
         )
         return element
+
 
 class RecommendationContainer:
     @staticmethod
@@ -119,69 +192,103 @@ class RecommendationContainer:
             dbc.Row(
                 dbc.Col([
                     html.H2("Recommended Concentration"),
-                    html.Span(id="concentration-data", className="d-none")
+                    html.Span(id="manual-output", className="d-none"),
+                    html.Span(id="batch-output", className="d-none"),
+                    html.Span(id="concentration-data", className="d-none"),
                 ]),
                 className="mt-4"
             ),
-            dbc.CardDeck([IIMHeader.render(), MIHeader.render(), SEHeader.render()], className="mt-3"),
+            html.Div(id="output-content")
         ]
         return html.Div(element)
 
-class IIMHeader:
+
+class ManualOutputContainer:
+    @staticmethod
+    def render():
+        element = html.Div([
+            html.P(
+                "Fill up your scores and we'll try to choose the best concentration for you!",
+                id="manual-welcome",
+            ),
+            dbc.Alert(
+                id="manual-error",
+                color="danger",
+                className="d-none",
+            ),
+            html.Div(
+                dbc.CardDeck(
+                    [IMDDHeader.render(), MIHeader.render(), SEHeader.render()],
+                    className="mt-3",
+                ),
+                id="manual-deck",
+                className="d-none",
+            ),
+        ], 
+            id="manual-output-content"
+        )
+        return element
+
+class IMDDHeader:
     @staticmethod
     def render():
         element = dbc.Card([
-                dbc.CardBody([
-                    html.H4("Interactive & Intelligent Media", className="card-title"),
-                    html.Small("Recommended", id="iim-recommended", className="card-subtitle"),
-                ]),
-                dbc.CardFooter([
-                    "Predicted Performance: ",
-                    html.Span("77", id="iim-performance"),
-                ], className="border-0"),
-            ],
-            id="iim-header",
+            dbc.CardBody([
+                html.H4("Interactive & Intelligent Media",
+                        className="card-title"),
+                html.Small("Recommended", id="imdd-recommended",
+                           className="card-subtitle"),
+            ]),
+            dbc.CardFooter([
+                "Predicted Performance: ",
+                html.Span("-", id="imdd-performance"),
+            ], className="border-0"),
+        ],
+            id="imdd-header",
             color="primary",
             className="text-white"
         )
 
         return element
 
+
 class MIHeader:
     @staticmethod
     def render():
         element = dbc.Card([
-                dbc.CardBody([
-                    html.H4("Medical Informatics", className="card-title"),
-                    html.Small("Recommended", id="mi-recommended", className="card-subtitle"),
-                ]),
-                dbc.CardFooter([
-                    "Predicted Performance: ",
-                    html.Span("65", id="mi-performance"),
-                ], className="border-0")
-            ],
+            dbc.CardBody([
+                html.H4("Medical Informatics", className="card-title"),
+                html.Small("Recommended", id="mi-recommended",
+                           className="card-subtitle"),
+            ]),
+            dbc.CardFooter([
+                "Predicted Performance: ",
+                html.Span("-", id="mi-performance"),
+            ], className="border-0")
+        ],
             id="mi-header",
             color="secondary",
             className="text-primary"
         )
         return element
 
+
 class SEHeader:
     @staticmethod
     def render():
         element = dbc.Card([
-                dbc.CardBody([
-                    html.H4("Software Engineering", className="card-title"),
-                    html.Small("Recommended", id="se-recommended", className="card-subtitle"),
-                ]),
-                dbc.CardFooter([
-                    "Predicted Performance: ",
-                    html.Span("53", id="se-performance"),
-                ], className="border-0")
-            ],
+            dbc.CardBody([
+                html.H4("Software Engineering", className="card-title"),
+                html.Small("Recommended", id="se-recommended",
+                           className="card-subtitle"),
+            ]),
+            dbc.CardFooter([
+                "Predicted Performance: ",
+                html.Span("-", id="se-performance"),
+            ], className="border-0")
+        ],
             id="se-header",
             color="secondary",
             className="text-primary"
         )
         return element
-
