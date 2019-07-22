@@ -93,7 +93,7 @@ The data were gathered from UPH's database for all students, including alumnis f
 
 ### Data cleansing
 
-The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [***here***](data/preprocess.ipynb).
+The raw data *needed* to be transformed so that the prediction model can be trained. The process can be roughly summarized in the diagram below. If you want to understand its further details, you can read them [***here***](notebooks/preprocess.ipynb).
 
 ### Model training + test
 
