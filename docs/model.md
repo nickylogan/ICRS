@@ -2,7 +2,7 @@
 
 ## Support Vector Machine (SVM)
 
-**SVM or Support Vectore Machine** is a type of supervised learning technique that has multiple different methods. It is used for classification, regression, and outliers detection. This method is notably efficient to handle high number of features. Also, it's decision function is highly customizable. 
+**SVM or Support Vector Machine** is a type of supervised learning technique that has multiple different methods. It is used for classification, regression, and outliers detection. This method is notably efficient to handle high number of features. Also, its decision function is highly customizable. 
 
 An SVM creates a hyper-plane or set of hyper-plane in an infinite dimensional space. A hyper-plane is concluded by finding the *largerst distance to the closest training data points in any class.* In general, the larger the margin is, the lower the generalization error will be.
 
@@ -15,7 +15,7 @@ SVC is capable to do multi-class classification on a dataset.
 
 ![https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_0011.png](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_0011.png)
 
-**SVR** is an extension of SVC to solve regression problems. It is a nonlinear model that has strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application. (2)
+**SVR** is an extension of SVC to solve regression problems. It is a nonlinear model that has strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application (2). Specifically, we are going to use [scikit-learn's SVR method](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html).
 
 Given a training set ![training-set](/img/equations/1.png) where ![y-in-R](/img/equations/2.png). SVR solves the following problem
 
