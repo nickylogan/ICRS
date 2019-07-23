@@ -107,6 +107,10 @@ class BatchInputContainer:
     @staticmethod
     def render():
         element = [
+            dbc.Alert(
+                "Each column can only contain floating point numbers between 0 and 4 inclusive. No empty values are allowed.", 
+                color="light"
+            ),
             html.A("Download template", className="btn btn-link", href="/static/sample.csv"),
             dbc.Col(
                 dcc.Upload(
