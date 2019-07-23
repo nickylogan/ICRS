@@ -36,7 +36,7 @@ In this implementation, we will use `scikit-learn` machine learning library to i
 
 ## Hyper-parameter Optimization
 
-Hyper-parameters are parameters that are not directly learnt within estimators. In this case, we use `GridSearchCV` provided by `scikit-learn` that does exhaustive search based on a parameters provided in `tuned_parameters`.
+Hyper-parameters are parameters that are not directly learnt within estimators. In this case, we use `GridSearchCV` provided by `scikit-learn` that does exhaustive search based on a parameters provided in `tuned_parameters`. (1)
 
 ```python
   tuned_parameters = [{
@@ -90,7 +90,7 @@ After having the best model possible, we dump the model into `.sav` files to be 
 ## References
 (1) Pedregosa et al. (2011) [*Scikit-learn: Machine Learning in Python.*](http://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html) 
 
-(2) Li, Q., Fu, Y., Zhou, X., & Xu, Y. (2009). *The Investigation and Application of SVC and SVR in Handling Missing Values. 2009 First International Conference on Information Science and Engineering.*
+(2) Li, Q., Fu, Y., Zhou, X., & Xu, Y. (2009). [*The Investigation and Application of SVC and SVR in Handling Missing Values.* 2009 First International Conference on Information Science and Engineering.](https://ieeexplore.ieee.org/document/5454860)
 
 (3) Albon, Chris (2017). [*Impute Missing Values With Means.*](https://chrisalbon.com/machine_learning/preprocessing_structured_data/impute_missing_values_with_means/)
 
