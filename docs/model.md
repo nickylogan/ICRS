@@ -1,6 +1,22 @@
 # Prediction Model
 
-## Support Vector Machine (SVM)
+## `train.py`
+
+> Make sure the [virtual environment](/README.md#installing) is still activated
+
+The model was trained using a script file in the `model` directory, named `train.py`. To run the file, simply execute the following command from the `model` directory:
+
+```sh
+(myvenv) $ python train.py
+```
+
+Its contents will be explained in the next section.
+
+## Explanation
+
+![diagram](/img/diagrams/training.svg)
+
+### Support Vector Machine (SVM)
 
 **SVM or Support Vector Machine** is a type of supervised learning technique that has multiple different methods. It is used for classification, regression, and outliers detection. This method is notably efficient to handle high number of features. Also, its decision function is highly customizable. 
 
@@ -35,22 +51,7 @@ The decision function is,
 
 In this implementation, we will use `scikit-learn` machine learning library to implement SVM [1].
 
-## Hyper-parameter Optimization
-
-Hyper-parameters are parameters that are not directly learnt within estimators. In this case, we use `GridSearchCV` provided by `scikit-learn` that does exhaustive search based on a parameters provided in `tuned_parameters`. (1)
-
-```python
-  tuned_parameters = [{
-            'kernel': ['rbf', 'poly', 'sigmoid', 'linear'],
-            'gamma': [1, 0.1, 0.01, 1e-3, 1e-4, 'auto', 'scale'],
-            'C': [1, 10, 100, 1000],
-            'degree': [3, 4, 5],
-        }]
-```
-
-In our implementation, we tested 4 different kernels, `rbf`, `poly`, `sigmoid` and `linear`. We also tested different values for `gamma`, `C`, and `degree` to find the best `score()` possible.
-
-## Data
+### Data
 
 Our data consists of Term 1, 2, and 4 scores of UPH Informatics students from 2012 to 2015. We carefully selected several courses that are taught regardless of the concentration and use those scores to predict the actual score in concentration-specific courses.
 
@@ -67,7 +68,22 @@ feature_array = imputer.transform(feature)
 feature = pd.DataFrame(feature_array, columns=feature.columns)
 ```
 
-## Training
+### Hyper-parameter Optimization
+
+Hyper-parameters are parameters that are not directly learnt within estimators. In this case, we use `GridSearchCV` provided by `scikit-learn` that does exhaustive search based on a parameters provided in `tuned_parameters`. (1)
+
+```python
+  tuned_parameters = [{
+            'kernel': ['rbf', 'poly', 'sigmoid', 'linear'],
+            'gamma': [1, 0.1, 0.01, 1e-3, 1e-4, 'auto', 'scale'],
+            'C': [1, 10, 100, 1000],
+            'degree': [3, 4, 5],
+        }]
+```
+
+In our implementation, we tested 4 different kernels, `rbf`, `poly`, `sigmoid` and `linear`. We also tested different values for `gamma`, `C`, and `degree` to find the best `score()` possible.
+
+### Training
 
 > **This training session is repeated for all corresponding concentration.**
 
@@ -86,7 +102,7 @@ clf.fit(X_train, y_train)
 
 After having the best model possible, we dump the model into `.sav` files to be called from the front-end. How the file is used was already explained [here](/README.md#integration-with-dash).
 
-## Test
+### Test
 
 The model can be tested using `r2` and MSE. Below is a code snippet for it:
 
