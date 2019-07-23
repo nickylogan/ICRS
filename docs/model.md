@@ -15,13 +15,13 @@ SVC is capable to do multi-class classification on a dataset.
 
 **SVR** is an extension of SVC to solve regression problems. is a nonlinear model that as strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application. (2)
 
-Given a training set ![equation](equations/1.png) where ![equation](equations/2.png). SVR solves the following problem
+Given a training set ![](equations/1.png) where ![](equations/2.png). SVR solves the following problem
 
-![equation](equations/3.png)
+![](equations/3.png)
 
 It's dual is
 
-![equation](equations/4.png)
+![](equations/4.png)
 
 Where `e` is the vector of all ones, `C > 0` is the upper bound, `Q` is an `n` by `n` positive semidefinite matrix, ![equation](equations/5.png) is the kernel function.
 
