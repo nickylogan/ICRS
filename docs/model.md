@@ -15,17 +15,17 @@ SVC is capable to do multi-class classification on a dataset.
 
 **SVR** is an extension of SVC to solve regression problems. is a nonlinear model that as strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application. (2)
 
-Given a training set ![](equations/1.png) where ![](equations/2.png). SVR solves the following problem
+Given a training set ![](../img/equations/1.png) where ![](../img/equations/2.png). SVR solves the following problem
 
-![](equations/3.png)
+![](../img/equations/3.png)
 
 It's dual is
 
-![](equations/4.png)
+![](../img/equations/4.png)
 
-Where `e` is the vector of all ones, `C > 0` is the upper bound, `Q` is an `n` by `n` positive semidefinite matrix, ![equation](equations/5.png) is the kernel function.
+Where `e` is the vector of all ones, `C > 0` is the upper bound, `Q` is an `n` by `n` positive semidefinite matrix, ![equation](../img/equations/5.png) is the kernel function.
 
-Training vectors or features are are mapped into higher dimensional space by function ![](equations/phi.png). (1)
+Training vectors or features are are mapped into higher dimensional space by function ![](../img/equations/phi.png). (1)
 
 In this implementation, we will use `scikit-learn` machine learning library to implement SVM.
 
