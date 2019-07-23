@@ -38,7 +38,7 @@ In this implementation, we will use `scikit-learn` machine learning library to i
 
 ## Hyper-parameter Optimization
 
-Hyper-parameters are parameters that are not directly learnt within estimators. In this case, we use `GridSearchCV` provided by `scikit-learn` that does exhaustive search based on a parameters provided in `tuned_parameters`.
+Hyper-parameters are parameters that are not directly learnt within estimators. In this case, we use `GridSearchCV` provided by `scikit-learn` that does exhaustive search based on a parameters provided in `tuned_parameters`. (1)
 
 ```python
   tuned_parameters = [{
