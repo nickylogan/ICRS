@@ -245,7 +245,7 @@ class IMDDHeader:
     def render():
         element = dbc.Card([
             dbc.CardBody([
-                html.H4("Interactive & Intelligent Media",
+                html.H4("Interactive Media Design & Development",
                         className="card-title"),
                 html.Small("Recommended", id="imdd-recommended",
                            className="card-subtitle"),
