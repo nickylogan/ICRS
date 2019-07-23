@@ -71,7 +71,7 @@ feature = pd.DataFrame(feature_array, columns=feature.columns)
 
 > **This training session is repeated for all corresponding concentration.**
 
-First, we use [`train_test_split()`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) to split our array into random train and test subsets. We use the `test_size` value of `0.3` and put a seed of 260 for `imdd`, 820 for `se`, and 903 for `mi` [1].
+First, we use [`train_test_split()`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) to split our array into random train and test subsets. We use the `test_size` value of `0.3` and put a seed of 260 for `imdd`, 820 for `se`, and 903 for `mi` [1]. The seed is chosen between 0 and 999 so that the model outputs the best score.
 
 Next, we train our SVR model with [`GridSearchCV()`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) and try to compare the `r2` score and Mean Squared Error for each iteration. We are looking for the best `r2` score possible and the least Mean Squared Error (MSE) possible. `r2` is the built in method for scoring the regression [1]. MSE calculated the average error between the actual `y` and the predicted `y`. `tuned_parameters` has been explained in previous section. Note that the class uses cross validation (in this instance, we use two fold due to the small amount of data).
 
