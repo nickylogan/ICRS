@@ -25,9 +25,14 @@ It's dual is
 
 Where `e` is the vector of all ones, `C > 0` is the upper bound, `Q` is an `n` by `n` positive semidefinite matrix, ![equation](../img/equations/5.png) is the kernel function.
 
-Training vectors or features are are mapped into higher dimensional space by function ![](../img/equations/phi.png). (1)
+Training vectors or features are are mapped into higher dimensional space by function ![](../img/equations/phi.png). 
 
-In this implementation, we will use `scikit-learn` machine learning library to implement SVM.
+The decision function is,
+
+![](../img/equations/6.png)
+
+
+In this implementation, we will use `scikit-learn` machine learning library to implement SVM.(1)
 
 ## Hyper-parameter Optimization
 
@@ -48,9 +53,9 @@ In our implementation, we tested 4 different kernels, `rbf`, `poly`, `sigmoid` a
 
 Our data consists of Term 1, 2, and 4 scores of UPH Informatics students from 2012 to 2015. We carefully selected several courses that are taught regardless of the concentration and use those scores to predict the actual score in concentration-specific courses.
 
-We want to predict how much score a person would get in a particular concentration based on his general courses score from Term 1, 2, and 4. We will call this value **CGPA or "Concentration GPA."** Since SVR is a nonlinear model and we only have short amount of data, SVR is suitable for this purpose.
+We want to predict how much score a person would get in a particular concentration based on his general courses score from Term 1, 2, and 4. We will call this value **CGPA or "Concentration GPA."** Since SVR is a nonlinear model and we only have short amount of data, SVR is suitable for this purpose. **In short, general course scores are our features, and CGPA is our target**.
 
-There are several missing values on the data due to the corresponding course not available for several batches. We need to impute those missing values. To do that, we use Mean Column Imputation method, which is using the mean of the whole column of a specific feature.(3)
+There are several missing values on the data due to the corresponding course not available for several batches. We need to impute those missing values. To do that, we use Mean Column Imputation method, which is using the mean of the whole column of a specific feature. (3)
 
 ```python
 # Impute missing data
@@ -60,9 +65,9 @@ imputer.fit(feature)
 feature_array = imputer.transform(feature)
 feature = pd.DataFrame(feature_array, columns=feature.columns)
 ```
-
 ## Training
 
+In the training process, we use `train_test_split()` to split our array into random train and test subsets.
 
 
 ## References
@@ -72,4 +77,4 @@ feature = pd.DataFrame(feature_array, columns=feature.columns)
 
 (3) Albon, Chris (2017). [*Impute Missing Values With Means.*](https://chrisalbon.com/machine_learning/preprocessing_structured_data/impute_missing_values_with_means/)
 
-(3)
+
