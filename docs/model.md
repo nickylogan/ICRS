@@ -13,7 +13,7 @@ SVC is capable to do multi-class classification on a dataset.
 
 ![https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_0011.png](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_0011.png)
 
-**SVR** is an extension of SVC to solve regression problems. is a nonlinear model that as strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application. (2)
+**SVR** is an extension of SVC to solve regression problems. It is a nonlinear model that has strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application. (2)
 
 Given a training set ![](../img/equations/1.png) where ![](../img/equations/2.png). SVR solves the following problem
 
@@ -65,9 +65,26 @@ imputer.fit(feature)
 feature_array = imputer.transform(feature)
 feature = pd.DataFrame(feature_array, columns=feature.columns)
 ```
+
+
 ## Training
 
-In the training process, we use `train_test_split()` to split our array into random train and test subsets.
+**This training session is repeated for all corresponding concentration.**
+
+First, we use `train_test_split()` to split our array into random train and test subsets. We use the `test_size` value of `0.3` and put a seed of 260 for `imdd`, 820 for `se`, and 903 for `mi`. (1)
+
+Next we, train our SVR model with `GridSearchCV()` and try to compare the `r2` score and Mean Squared Error for each iteration. We are looking for the best `r2` score possible and the least Mean Squared Error possible. `tuned_parameters` has been explained in previous section.
+
+```python
+  clf = GridSearchCV(SVR(), tuned_parameters,
+                       cv=2, iid=True,
+                       refit='r2',
+                       scoring=['r2', 'neg_mean_squared_error'],
+                       )
+    clf.fit(X_train, y_train)
+```
+
+After having the best model possible, we dump the model into `.sav` files to be called from the front-end.
 
 
 ## References
