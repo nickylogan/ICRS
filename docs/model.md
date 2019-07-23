@@ -15,7 +15,7 @@ SVC is capable to do multi-class classification on a dataset.
 
 ![https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_0011.png](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_0011.png)
 
-**SVR** is an extension of SVC to solve regression problems. It is a nonlinear model that has strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application (2). Specifically, we are going to use [scikit-learn's SVR method](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html).
+**SVR** is an extension of SVC to solve regression problems. It is a nonlinear model that has strong generalization ability, fast convergence speed, and has a relatively high forecast accuracy and short forecast time under the condition of small sample. We use this model throughout the entire application [2]. Specifically, we are going to use its variant called [epsilon-SVR](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html).
 
 Given a training set ![training-set](/img/equations/1.png) where ![y-in-R](/img/equations/2.png). SVR solves the following problem
 
@@ -32,7 +32,6 @@ Training vectors or features are are mapped into higher dimensional space by fun
 The decision function is,
 
 ![decision](/img/equations/6.png)
-
 
 In this implementation, we will use `scikit-learn` machine learning library to implement SVM [1].
 
@@ -70,7 +69,7 @@ feature = pd.DataFrame(feature_array, columns=feature.columns)
 
 ## Training
 
-**This training session is repeated for all corresponding concentration.**
+> **This training session is repeated for all corresponding concentration.**
 
 First, we use [`train_test_split()`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) to split our array into random train and test subsets. We use the `test_size` value of `0.3` and put a seed of 260 for `imdd`, 820 for `se`, and 903 for `mi` [1].
 
