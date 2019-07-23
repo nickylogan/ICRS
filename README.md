@@ -1,4 +1,4 @@
-# UPH Informatics Concentration Recommender System
+# UPH Informatics Concentration Recommender System 💻
 
 ## Background
 
